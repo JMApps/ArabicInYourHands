@@ -2,14 +2,14 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/bottom_nav_first_volume"
-        android:icon="@drawable/ic_one"
+        android:icon="@drawable/ic_first_volume"
         android:title="" />
     <item
         android:id="@+id/bottom_nav_second_volume"
-        android:icon="@drawable/ic_two"
+        android:icon="@drawable/ic_second_volume"
         android:title="" />
     <item
         android:id="@+id/bottom_nav_third_volume"
-        android:icon="@drawable/ic_three"
+        android:icon="@drawable/ic_third_volume"
         android:title="" />
 </menu>

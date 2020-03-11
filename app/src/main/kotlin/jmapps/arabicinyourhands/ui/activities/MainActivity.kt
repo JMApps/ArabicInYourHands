@@ -59,8 +59,15 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            R.id.nav_home -> {
-            }
+            R.id.nav_tools -> {}
+
+            R.id.nav_night_mode -> {}
+
+            R.id.nav_about_us -> {}
+
+            R.id.nav_rate -> {}
+
+            R.id.nav_share -> {}
 
             R.id.bottom_nav_first_volume -> otherPresenterImpl.replaceFragment(FirstVolumeFragment())
 

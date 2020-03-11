@@ -4,5 +4,10 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
-    <string name="action_settings">Settings</string>
+    <string name="action_nav_tools">Настройки</string>
+    <string name="action_nav_night_mode">Ночной режим</string>
+    <string name="action_nav_additionally">Дополнительно</string>
+    <string name="action_nav_about_us">О нас</string>
+    <string name="action_nav_rate">Оценить</string>
+    <string name="action_nav_share">Поделиться</string>
 </resources>
