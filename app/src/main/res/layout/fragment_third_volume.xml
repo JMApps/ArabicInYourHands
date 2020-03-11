@@ -1,21 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
 
     <data>
 
     </data>
 
+    <!--    <androidx.recyclerview.widget.RecyclerView-->
+    <!--        android:id="@+id/rvChaptersThirdVolume"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        android:scrollbars="vertical" />-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        tools:context=".ui.main.PlaceholderFragment">
+        android:gravity="center">
 
         <TextView
-            android:id="@+id/section_label"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="ТРЕТИЙ ФРАГМЕНТ" />
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/ic_not_yet"
+            android:drawablePadding="16dp"
+            android:gravity="center"
+            android:text="@string/action_not_yet_developed"
+            android:textSize="25sp" />
     </LinearLayout>
 </layout>

@@ -26,9 +26,9 @@ class ThirdVolumeFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_third_volume, container, false)
-        mainChapterViewModel.texts.observe(viewLifecycleOwner, Observer<String> {
-
-        })
+//        mainChapterViewModel.texts.observe(viewLifecycleOwner, Observer<String> {
+//
+//        })
         return binding.root
     }
 }
