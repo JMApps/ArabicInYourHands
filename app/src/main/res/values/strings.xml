@@ -10,4 +10,5 @@
     <string name="action_nav_about_us">О нас</string>
     <string name="action_nav_rate">Оценить</string>
     <string name="action_nav_share">Поделиться</string>
+    <string name="action_not_yet_developed">Ещё не разработан</string>
 </resources>
