@@ -40,7 +40,7 @@
             android:layout_alignParentBottom="true"
             android:layout_gravity="bottom"
             android:overScrollMode="always"
-            app:itemBackground="@color/white"
+            app:itemBackground="@color/colorPrimary"
             app:itemIconTint="@color/bottom_navigation_color_state"
             app:labelVisibilityMode="unlabeled"
             app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior"
