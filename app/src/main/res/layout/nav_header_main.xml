@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="180dp"
-    android:background="@color/lightGray"
+    android:background="@color/colorPrimary"
     android:gravity="center"
     android:theme="@style/ThemeOverlay.AppCompat">
 
@@ -12,5 +12,5 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:contentDescription="@string/app_name"
-        app:srcCompat="@mipmap/ic_launcher_round" />
+        app:srcCompat="@drawable/ic_launch" />
 </LinearLayout>

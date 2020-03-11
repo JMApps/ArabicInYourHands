@@ -164,7 +164,7 @@
                 android:layout_marginTop="24dp"
                 android:layout_marginEnd="16dp"
                 android:text="@string/action_peace_test_translation"
-                android:textColor="@color/main"
+                android:textColor="@color/colorAccent"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
