@@ -8,7 +8,29 @@
     <string name="action_nav_night_mode">Ночной режим</string>
     <string name="action_nav_additionally">Дополнительно</string>
     <string name="action_nav_about_us">О нас</string>
+    <string name="action_other_apps">Другие приложения</string>
     <string name="action_nav_rate">Оценить</string>
     <string name="action_nav_share">Поделиться</string>
+
     <string name="action_not_yet_developed">Ещё не разработан</string>
+
+    <string name="action_text_size_arabic">Размер арабского текста</string>
+    <string name="action_text_size_translation">Размер текста перевода</string>
+    <string name="action_peace_test_arabic">السلام عليكم</string>
+    <string name="action_peace_test_translation">Ас-Саляму `Аляй-кум</string>
+    <string name="action_show_translation">Отображать перевод</string>
+
+    <string name="about_us_text">
+        <b>JMApps</b> - серия бесплатных и безрекламных андроид-приложений для мусульман.\n\n
+
+        Вы можете следить за обновлением старых и изданием новых приложений в наших соцсетях:\n\n
+
+        ВКонтакте: www.vk.com/JMApps\n
+        Telegram: t.me/JMApps\n
+        Facebook: www.facebook.com/JMAppsM\n
+        Instagram: www.instagram.com/dev_muslim\n\n
+
+        По всем вопросам, предложениям и скритикой можете писать нам на почту:
+        JMAppsMuslim@gmail.com или в Telegram: t.me/dev_muslim
+    </string>
 </resources>
