@@ -22,6 +22,10 @@
                 android:icon="@drawable/ic_about_us"
                 android:title="@string/action_nav_about_us" />
             <item
+                android:id="@+id/nav_other_apps"
+                android:icon="@drawable/ic_other_apps"
+                android:title="@string/action_other_apps" />
+            <item
                 android:id="@+id/nav_rate"
                 android:icon="@drawable/ic_rate"
                 android:title="@string/action_nav_rate" />
