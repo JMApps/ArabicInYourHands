@@ -6,23 +6,14 @@
         <item name="android:fontFamily">@font/gilroy_medium</item>
     </style>
 
-    <style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.DayNight.DarkActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:fontFamily">@font/gilroy_medium</item>
     </style>
 
-    <style name="BottomSheetStyle" parent="Theme.Design.Light.BottomSheetDialog">
+    <style name="BottomSheetStyle" parent="Theme.Design.BottomSheetDialog">
         <item name="bottomSheetStyle">@style/BottomSheetStyleBehavior</item>
-        <item name="android:colorBackground">@color/colorPrimary</item>
-    </style>
-
-    <style name="BottomSheetStyleBehavior" parent="Widget.Design.BottomSheet.Modal">
-        <item name="behavior_peekHeight">1000dp</item>
-    </style>
-
-    <style name="CardViewStyle" parent="CardView">
-        <item name="cardBackgroundColor">@color/black</item>
     </style>
 </resources>
