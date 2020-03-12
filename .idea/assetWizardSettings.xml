@@ -51,7 +51,7 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
-                                                <entry key="scalingPercent" value="60" />
+                                                <entry key="scalingPercent" value="58" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -62,7 +62,7 @@
                                   <option name="values">
                                     <map>
                                       <entry key="backgroundAssetType" value="COLOR" />
-                                      <entry key="backgroundColor" value="ffffff" />
+                                      <entry key="backgroundColor" value="9c27b0" />
                                       <entry key="backgroundImage" value="$USER_HOME$/Desktop/arabic_in_origin.png" />
                                       <entry key="foregroundImage" value="$USER_HOME$/Desktop/arabic_in_origin.png" />
                                     </map>
