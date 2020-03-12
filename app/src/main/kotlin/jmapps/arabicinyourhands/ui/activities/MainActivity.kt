@@ -26,11 +26,12 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     BottomNavigationView.OnNavigationItemSelectedListener, OtherContract.OtherView {
 
     private lateinit var binding: ActivityMainBinding
-    private lateinit var fragmentTransaction: FragmentTransaction
-    private lateinit var otherPresenterImpl: OtherPresenterImpl
 
     private lateinit var preferences: SharedPreferences
     private lateinit var editor: SharedPreferences.Editor
+
+    private lateinit var fragmentTransaction: FragmentTransaction
+    private lateinit var otherPresenterImpl: OtherPresenterImpl
 
     private lateinit var swNightMode: Switch
     private var valNightMode: Boolean = false
@@ -48,7 +49,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         isNightMode(valNightMode)
 
         otherPresenterImpl = OtherPresenterImpl(this, this)
-        otherPresenterImpl.replaceFragment(FirstVolumeFragment())
+        otherPresenterImpl.replaceFragment(SecondVolumeFragment())
 
         val toggle = ActionBarDrawerToggle(
             this,
@@ -63,6 +64,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         binding.navigationView.setNavigationItemSelectedListener(this)
         binding.mainAppBar.bottomNavigationMain.setOnNavigationItemSelectedListener(this)
+        binding.mainAppBar.bottomNavigationMain.selectedItemId = R.id.bottom_nav_second_volume
 
         navigationView.menu.findItem(R.id.nav_night_mode).actionView = Switch(this)
         swNightMode = navigationView.menu.findItem(R.id.nav_night_mode).actionView as Switch
