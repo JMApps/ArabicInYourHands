@@ -1,18 +1,4 @@
 <resources>
-
-    <style name="SplashTheme" parent="Theme.AppCompat.DayNight.DarkActionBar">
-        <item name="android:windowFullscreen">true</item>
-        <item name="android:windowBackground">@drawable/splash_screen</item>
-        <item name="android:fontFamily">@font/gilroy_medium</item>
-    </style>
-
-    <style name="AppTheme" parent="Theme.AppCompat.DayNight.DarkActionBar">
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:fontFamily">@font/gilroy_medium</item>
-    </style>
-
     <style name="BottomSheetStyle" parent="Theme.Design.BottomSheetDialog">
         <item name="bottomSheetStyle">@style/BottomSheetStyleBehavior</item>
     </style>

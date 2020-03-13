@@ -10,4 +10,6 @@
     <color name="gray">#626262</color>
     <color name="lightGray">#DADADA</color>
     <color name="colorId">#9C27B0</color>
+    <color name="cardViewBackground">#FFFFFF</color>
+    <color name="mainBackground">#FFFFFF</color>
 </resources>

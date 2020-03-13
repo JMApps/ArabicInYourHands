@@ -10,11 +10,13 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/mainBackground</item>
         <item name="android:fontFamily">@font/gilroy_medium</item>
     </style>
 
     <style name="BottomSheetStyle" parent="Theme.Design.Light.BottomSheetDialog">
         <item name="bottomSheetStyle">@style/BottomSheetStyleBehavior</item>
+        <item name="android:colorBackground">@color/mainBackground</item>
     </style>
 
     <style name="BottomSheetStyleBehavior" parent="Widget.Design.BottomSheet.Modal">
@@ -22,7 +24,7 @@
     </style>
 
     <style name="CardViewStyle" parent="CardView">
-        <item name="cardBackgroundColor">@color/white</item>
+        <item name="cardBackgroundColor">@color/cardViewBackground</item>
     </style>
 
     <style name="AppTheme.NoActionBar">
