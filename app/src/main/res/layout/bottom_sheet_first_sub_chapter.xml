@@ -16,9 +16,9 @@
             android:layout_height="wrap_content"
             android:background="@color/colorPrimary"
             android:drawableStart="@drawable/ic_list"
-            android:drawablePadding="8dp"
+            android:drawablePadding="16dp"
             android:gravity="center_vertical"
-            android:padding="8dp"
+            android:padding="16dp"
             android:textColor="@color/white"
             android:textSize="18sp" />
 
