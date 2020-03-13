@@ -15,27 +15,45 @@ import jmapps.arabicinyourhands.ui.adapter.SubChapterAdapter
 import jmapps.arabicinyourhands.ui.model.ChapterModel
 import jmapps.arabicinyourhands.ui.model.SubChapterModel
 
-class FirstSubChapterBottomSheet(private val sectionNumber: Int) : BottomSheetDialogFragment(),
+class FirstSubChapterBottomSheet : BottomSheetDialogFragment(),
     SubChapterAdapter.OnSubChapterItemClick {
 
     override fun getTheme() = R.style.BottomSheetStyle
+
+    private var sectionNumber: Int? = null
 
     private lateinit var binding: BottomSheetFirstSubChapterBinding
     private lateinit var chapterList: MutableList<ChapterModel>
     private lateinit var subChapterList: MutableList<SubChapterModel>
     private lateinit var subChapterAdapter: SubChapterAdapter
 
+    companion object {
+
+        const val firstSubChapterTag = "first_sub_chapter_tag"
+        private const val ARG_SECTION_NUMBER = "first_section_number"
+
+        @JvmStatic
+        fun newInstance(sectionNumber: Int): FirstSubChapterBottomSheet {
+            return FirstSubChapterBottomSheet().apply {
+                arguments = Bundle().apply {
+                    putInt(ARG_SECTION_NUMBER, sectionNumber)
+                }
+            }
+        }
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        sectionNumber = arguments?.getInt(ARG_SECTION_NUMBER)
         chapterList = ChapterLists(context).getFirstChapters
-        subChapterList = SubChapterLists(context).getFirstSubChapters(sectionNumber)
+        subChapterList = SubChapterLists(context).getFirstSubChapters(sectionNumber!!)
         subChapterAdapter = SubChapterAdapter(context, subChapterList, this)
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         binding = DataBindingUtil.inflate(inflater, R.layout.bottom_sheet_first_sub_chapter, container, false)
 
-        binding.tvChapterName.text = chapterList[sectionNumber - 1].chapterTitle
+        binding.tvChapterName.text = chapterList[sectionNumber!! - 1].chapterTitle
 
         val verticalLayout = LinearLayoutManager(context)
         binding.rvFirstSubChapter.layoutManager = verticalLayout
@@ -46,9 +64,5 @@ class FirstSubChapterBottomSheet(private val sectionNumber: Int) : BottomSheetDi
 
     override fun onItemClick(subChapterId: Int) {
 
-    }
-
-    companion object {
-        const val firstSubChapterTag = "first_sub_chapter_tag"
     }
 }

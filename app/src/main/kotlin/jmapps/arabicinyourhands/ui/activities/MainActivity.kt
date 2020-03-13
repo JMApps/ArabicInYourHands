@@ -136,12 +136,12 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
     override fun firstSubChapterItem(chapterId: Int) {
-        val firstSubChapterBottomSheet = FirstSubChapterBottomSheet(chapterId)
+        val firstSubChapterBottomSheet = FirstSubChapterBottomSheet.newInstance(chapterId)
         firstSubChapterBottomSheet.show(supportFragmentManager, FirstSubChapterBottomSheet.firstSubChapterTag)
     }
 
     override fun secondSubChapterItem(chapterId: Int) {
-        val secondSubChapterBottomSheet = SecondSubChapterBottomSheet(chapterId)
+        val secondSubChapterBottomSheet = SecondSubChapterBottomSheet.newInstance(chapterId)
         secondSubChapterBottomSheet.show(supportFragmentManager, SecondSubChapterBottomSheet.secondSubChapterTag)
     }
 }

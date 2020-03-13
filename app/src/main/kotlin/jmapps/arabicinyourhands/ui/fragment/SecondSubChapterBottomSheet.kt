@@ -15,27 +15,45 @@ import jmapps.arabicinyourhands.ui.adapter.SubChapterAdapter
 import jmapps.arabicinyourhands.ui.model.ChapterModel
 import jmapps.arabicinyourhands.ui.model.SubChapterModel
 
-class SecondSubChapterBottomSheet(private val sectionNumber: Int) : BottomSheetDialogFragment(),
+class SecondSubChapterBottomSheet() : BottomSheetDialogFragment(),
     SubChapterAdapter.OnSubChapterItemClick {
 
     override fun getTheme() = R.style.BottomSheetStyle
+
+    private var sectionNumber: Int? = null
 
     private lateinit var binding: BottomSheetSecondSubChapterBinding
     private lateinit var chapterList: MutableList<ChapterModel>
     private lateinit var subChapterList: MutableList<SubChapterModel>
     private lateinit var subChapterAdapter: SubChapterAdapter
 
+    companion object {
+
+        const val secondSubChapterTag = "second_sub_chapter_tag"
+        private const val ARG_SECTION_NUMBER = "second_section_number"
+
+        @JvmStatic
+        fun newInstance(sectionNumber: Int): SecondSubChapterBottomSheet {
+            return SecondSubChapterBottomSheet().apply {
+                arguments = Bundle().apply {
+                    putInt(ARG_SECTION_NUMBER, sectionNumber)
+                }
+            }
+        }
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        sectionNumber = arguments?.getInt(ARG_SECTION_NUMBER)
         chapterList = ChapterLists(context).getSecondChapters
-        subChapterList = SubChapterLists(context).getSecondSubChapters(sectionNumber)
+        subChapterList = SubChapterLists(context).getSecondSubChapters(sectionNumber!!)
         subChapterAdapter = SubChapterAdapter(context, subChapterList, this)
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         binding = DataBindingUtil.inflate(inflater, R.layout.bottom_sheet_second_sub_chapter, container, false)
 
-        binding.tvChapterName.text = chapterList[sectionNumber - 1].chapterTitle
+        binding.tvChapterName.text = chapterList[sectionNumber!! - 1].chapterTitle
 
         val verticalLayout = LinearLayoutManager(context)
         binding.rvSecondSubChapter.layoutManager = verticalLayout
@@ -46,9 +64,5 @@ class SecondSubChapterBottomSheet(private val sectionNumber: Int) : BottomSheetD
 
     override fun onItemClick(subChapterId: Int) {
 
-    }
-
-    companion object {
-        const val secondSubChapterTag = "second_sub_chapter_tag"
     }
 }
