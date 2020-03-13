@@ -32,8 +32,8 @@ class SecondChapterFragment : Fragment(), ChapterAdapter.OnChapterItemClick {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_second_chapter, container, false)
 
         val verticalLayout = LinearLayoutManager(context)
-        binding.rvChaptersSecondVolume.layoutManager = verticalLayout
-        binding.rvChaptersSecondVolume.adapter = chapterAdapter
+        binding.rvSecondChapter.layoutManager = verticalLayout
+        binding.rvSecondChapter.adapter = chapterAdapter
 
         return binding.root
     }

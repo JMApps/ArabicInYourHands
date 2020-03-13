@@ -32,8 +32,8 @@ class FirstChapterFragment : Fragment(), ChapterAdapter.OnChapterItemClick {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_first_chapter, container, false)
 
         val verticalLayout = LinearLayoutManager(context)
-        binding.rvChaptersFirstVolume.layoutManager = verticalLayout
-        binding.rvChaptersFirstVolume.adapter = chapterAdapter
+        binding.rvFirstChapter.layoutManager = verticalLayout
+        binding.rvFirstChapter.adapter = chapterAdapter
 
         return binding.root
     }
