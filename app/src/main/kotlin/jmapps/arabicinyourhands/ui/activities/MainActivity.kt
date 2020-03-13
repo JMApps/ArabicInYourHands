@@ -23,7 +23,8 @@ import jmapps.arabicinyourhands.ui.fragment.*
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener,
-    BottomNavigationView.OnNavigationItemSelectedListener, OtherContract.OtherView {
+    BottomNavigationView.OnNavigationItemSelectedListener, OtherContract.OtherView,
+    FirstChapterFragment.GetFirstSubChapterItem, SecondChapterFragment.GetSecondSubChapterItem {
 
     private lateinit var binding: ActivityMainBinding
 
@@ -49,7 +50,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         isNightMode(valNightMode)
 
         otherPresenterImpl = OtherPresenterImpl(this, this)
-        otherPresenterImpl.replaceFragment(SecondVolumeFragment())
+        otherPresenterImpl.replaceFragment(FirstChapterFragment())
 
         val toggle = ActionBarDrawerToggle(
             this,
@@ -64,7 +65,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         binding.navigationView.setNavigationItemSelectedListener(this)
         binding.mainAppBar.bottomNavigationMain.setOnNavigationItemSelectedListener(this)
-        binding.mainAppBar.bottomNavigationMain.selectedItemId = R.id.bottom_nav_second_volume
 
         navigationView.menu.findItem(R.id.nav_night_mode).actionView = Switch(this)
         swNightMode = navigationView.menu.findItem(R.id.nav_night_mode).actionView as Switch
@@ -95,11 +95,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
             R.id.nav_share -> otherPresenterImpl.shareLink()
 
-            R.id.bottom_nav_first_volume -> otherPresenterImpl.replaceFragment(FirstVolumeFragment())
+            R.id.bottom_nav_first_volume -> otherPresenterImpl.replaceFragment(FirstChapterFragment())
 
-            R.id.bottom_nav_second_volume -> otherPresenterImpl.replaceFragment(SecondVolumeFragment())
+            R.id.bottom_nav_second_volume -> otherPresenterImpl.replaceFragment(SecondChapterFragment())
 
-            R.id.bottom_nav_third_volume -> otherPresenterImpl.replaceFragment(ThirdVolumeFragment())
+            R.id.bottom_nav_third_volume -> otherPresenterImpl.replaceFragment(ThirdChapterFragment())
         }
         binding.drawerLayout.closeDrawer(GravityCompat.START)
         return true
@@ -133,5 +133,15 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     override fun getAboutUs() {
         val aboutUsBottomSheet = AboutUsBottomSheet()
         aboutUsBottomSheet.show(supportFragmentManager, AboutUsBottomSheet.AboutUsTag)
+    }
+
+    override fun firstSubChapterItem(chapterId: Int) {
+        val firstSubChapterBottomSheet = FirstSubChapterBottomSheet(chapterId)
+        firstSubChapterBottomSheet.show(supportFragmentManager, FirstSubChapterBottomSheet.firstSubChapterTag)
+    }
+
+    override fun secondSubChapterItem(chapterId: Int) {
+        val secondSubChapterBottomSheet = SecondSubChapterBottomSheet(chapterId)
+        secondSubChapterBottomSheet.show(supportFragmentManager, SecondSubChapterBottomSheet.secondSubChapterTag)
     }
 }
