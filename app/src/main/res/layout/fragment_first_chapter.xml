@@ -9,5 +9,6 @@
         android:id="@+id/rvFirstChapter"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:scrollbarThumbVertical="@drawable/thumb_line_background"
         android:scrollbars="vertical" />
 </layout>

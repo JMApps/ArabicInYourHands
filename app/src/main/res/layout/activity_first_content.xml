@@ -90,6 +90,7 @@
             android:layout_gravity="bottom"
             android:background="@color/colorPrimary"
             android:overScrollMode="always"
+            android:visibility="gone"
             app:labelVisibilityMode="unlabeled"
             app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior">
 
