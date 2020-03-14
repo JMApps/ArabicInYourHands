@@ -13,9 +13,9 @@ class SubChapterHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     val tvSubChapter: TextView = itemView.findViewById(R.id.tvSubChapter)
     val tvSubChapterTitle: TextView = itemView.findViewById(R.id.tvSubChapterTitle)
 
-    fun findItemClick(onSubChapterItemClick: SubChapterAdapter.OnSubChapterItemClick, subChapterId: Int) {
+    fun findItemClick(onSubChapterItemClick: SubChapterAdapter.OnSubChapterItemClick, subChapterId: Int, subChapterPosition: Int) {
         itemView.setOnClickListener {
-            onSubChapterItemClick.onItemClick(subChapterId)
+            onSubChapterItemClick.onItemClick(subChapterId, subChapterPosition)
         }
     }
 }
