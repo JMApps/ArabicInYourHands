@@ -34,11 +34,8 @@ class FirstContentActivity : AppCompatActivity(), ViewPager.OnPageChangeListener
         subChapterList = SubChapterLists(this).getFirstSubChapters(chapterId!!)
 
         initViewPagerContainer()
+        initTextViewsInAppBar(subChapterPosition!!)
         binding.vpFirstContentContainer.addOnPageChangeListener(this)
-
-        val currentText = subChapterList[subChapterPosition!!]
-        binding.tvDialog.text = currentText.dialog
-        binding.tvDialogTitle.text = currentText.dialogTitle
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -53,18 +50,23 @@ class FirstContentActivity : AppCompatActivity(), ViewPager.OnPageChangeListener
     override fun onPageScrolled(position: Int, positionOffset: Float, positionOffsetPixels: Int) {}
 
     override fun onPageSelected(position: Int) {
-        val currentText = subChapterList[position]
-        binding.tvDialog.text = currentText.dialog
-        binding.tvDialogTitle.text = currentText.dialogTitle
+        initTextViewsInAppBar(position)
     }
 
     private fun initViewPagerContainer() {
-        val firstVolumeContentPagerAdapter = FirstVolumeContentPagerAdapter(supportFragmentManager, subChapterList)
         binding.apply {
+            val firstVolumeContentPagerAdapter = FirstVolumeContentPagerAdapter(supportFragmentManager, subChapterList)
             vpFirstContentContainer.adapter = firstVolumeContentPagerAdapter
             diFirstContent.attachViewPager(binding.vpFirstContentContainer)
             diFirstContent.setDotTintRes(R.color.white)
             vpFirstContentContainer.currentItem = subChapterPosition!!
         }
+    }
+
+    private fun initTextViewsInAppBar(position: Int) {
+        subChapterList = SubChapterLists(this).getFirstSubChapters(chapterId!!)
+        val currentText = subChapterList[position]
+        binding.tvDialog.text = currentText.dialog
+        binding.tvDialogTitle.text = currentText.dialogTitle
     }
 }
