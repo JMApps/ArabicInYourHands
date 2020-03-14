@@ -13,11 +13,12 @@ import jmapps.arabicinyourhands.ui.model.SubChapterModel
 
 class FirstContentActivity : AppCompatActivity(), ViewPager.OnPageChangeListener {
 
+    private lateinit var binding: ActivityFirstContentBinding
+
     private var chapterId: Int? = null
     private var subChapterId: Int? = null
     private var subChapterPosition: Int? = null
 
-    private lateinit var binding: ActivityFirstContentBinding
     private lateinit var subChapterList: MutableList<SubChapterModel>
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -54,8 +55,8 @@ class FirstContentActivity : AppCompatActivity(), ViewPager.OnPageChangeListener
     }
 
     private fun initViewPagerContainer() {
+        val firstVolumeContentPagerAdapter = FirstVolumeContentPagerAdapter(supportFragmentManager, subChapterList, chapterId!!)
         binding.apply {
-            val firstVolumeContentPagerAdapter = FirstVolumeContentPagerAdapter(supportFragmentManager, subChapterList)
             vpFirstContentContainer.adapter = firstVolumeContentPagerAdapter
             diFirstContent.attachViewPager(binding.vpFirstContentContainer)
             diFirstContent.setDotTintRes(R.color.white)
