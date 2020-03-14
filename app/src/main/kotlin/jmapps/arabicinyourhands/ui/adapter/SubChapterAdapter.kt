@@ -15,7 +15,7 @@ private val onSubChapterItemClick: OnSubChapterItemClick) : RecyclerView.Adapter
     private val inflater: LayoutInflater = LayoutInflater.from(context)
 
     interface OnSubChapterItemClick {
-        fun onItemClick(subChapterId: Int)
+        fun onItemClick(subChapterId: Int, subChapterPosition: Int)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SubChapterHolder {
@@ -34,6 +34,6 @@ private val onSubChapterItemClick: OnSubChapterItemClick) : RecyclerView.Adapter
         holder.ivSubChapterIcon.setBackgroundResource(icSource!!)
         holder.tvSubChapter.text = current.dialog
         holder.tvSubChapterTitle.text = current.dialogTitle
-        holder.findItemClick(onSubChapterItemClick, current.subChapterId)
+        holder.findItemClick(onSubChapterItemClick, current.subChapterId, position)
     }
 }

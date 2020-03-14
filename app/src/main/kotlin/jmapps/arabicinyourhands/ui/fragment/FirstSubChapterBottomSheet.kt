@@ -1,5 +1,6 @@
 package jmapps.arabicinyourhands.ui.fragment
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -11,6 +12,7 @@ import jmapps.arabicinyourhands.R
 import jmapps.arabicinyourhands.data.database.lists.ChapterLists
 import jmapps.arabicinyourhands.data.database.lists.SubChapterLists
 import jmapps.arabicinyourhands.databinding.BottomSheetFirstSubChapterBinding
+import jmapps.arabicinyourhands.ui.activities.FirstContentActivity
 import jmapps.arabicinyourhands.ui.adapter.SubChapterAdapter
 import jmapps.arabicinyourhands.ui.model.ChapterModel
 import jmapps.arabicinyourhands.ui.model.SubChapterModel
@@ -62,7 +64,12 @@ class FirstSubChapterBottomSheet : BottomSheetDialogFragment(),
         return binding.root
     }
 
-    override fun onItemClick(subChapterId: Int) {
-
+    override fun onItemClick(subChapterId: Int, subChapterPosition: Int) {
+        val toFirstContentActivity = Intent(context, FirstContentActivity::class.java)
+        toFirstContentActivity.putExtra("key_first_chapter_id", sectionNumber)
+        toFirstContentActivity.putExtra("key_first_sub_chapter_id", subChapterId)
+        toFirstContentActivity.putExtra("key_first_sub_chapter_position", subChapterPosition)
+        startActivity(toFirstContentActivity)
+        dialog?.dismiss()
     }
 }

@@ -62,7 +62,7 @@ class SecondSubChapterBottomSheet() : BottomSheetDialogFragment(),
         return binding.root
     }
 
-    override fun onItemClick(subChapterId: Int) {
+    override fun onItemClick(subChapterId: Int, subChapterPosition: Int) {
 
     }
 }
