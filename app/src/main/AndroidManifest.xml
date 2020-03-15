@@ -12,6 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+
         <activity
             android:name=".ui.activities.SplashActivity"
             android:theme="@style/SplashTheme">
@@ -23,11 +24,16 @@
         </activity>
         <activity
             android:name=".ui.activities.MainActivity"
+            android:alwaysRetainTaskState="true"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".ui.activities.FirstContentActivity"
             android:label="@string/title_activity_content"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.activities.SecondContentActivity"
+            android:label="@string/title_activity_second_content"
             android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
