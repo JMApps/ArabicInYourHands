@@ -28,7 +28,7 @@ class FirstContentFragment : Fragment(), ContentAdapter.OnContentItemClick {
     companion object {
 
         private const val ARG_SECTION_NUMBER = "first_content_section"
-        private const val ARG_CHAPTER_NUMBER = "chapter_section"
+        private const val ARG_CHAPTER_NUMBER = "first_chapter_section"
 
         @JvmStatic
         fun newInstance(sectionNumber: Int, chapterId: Int): FirstContentFragment {
