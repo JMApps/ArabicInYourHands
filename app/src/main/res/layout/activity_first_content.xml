@@ -90,18 +90,64 @@
             android:layout_gravity="bottom"
             android:background="@color/colorPrimary"
             android:overScrollMode="always"
-            android:visibility="gone"
             app:labelVisibilityMode="unlabeled"
             app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="16dp">
 
                 <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:id="@+id/btnPrevious"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/state_previous" />
+
+                <ToggleButton
+                    android:id="@+id/btnPlay"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/state_play_pause"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn="" />
+
+                <Button
+                    android:id="@+id/btnNext"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/state_next" />
+
+                <SeekBar
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1" />
+
+                <ToggleButton
+                    android:id="@+id/btnRepeat"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/state_repeat"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn="" />
+
+                <ToggleButton
+                    android:id="@+id/btnSerialPlay"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/state_serial_play"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn="" />
             </LinearLayout>
         </com.google.android.material.bottomnavigation.BottomNavigationView>
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
