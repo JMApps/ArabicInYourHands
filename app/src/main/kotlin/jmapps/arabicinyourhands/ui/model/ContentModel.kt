@@ -6,5 +6,5 @@ data class ContentModel(
     val ArabicContent: String,
     val TranslationName: String?,
     val TranslationContent: String,
-    val NameAudio: String
+    val NameAudio: String?
 )

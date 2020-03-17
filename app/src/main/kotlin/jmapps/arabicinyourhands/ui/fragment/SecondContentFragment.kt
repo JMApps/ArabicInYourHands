@@ -8,6 +8,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import jmapps.arabicinyourhands.R
+import jmapps.arabicinyourhands.data.database.content.ContentLists
 import jmapps.arabicinyourhands.data.database.lists.SubChapterLists
 import jmapps.arabicinyourhands.databinding.FragmentSecondContentBinding
 import jmapps.arabicinyourhands.ui.adapter.ContentAdapter
@@ -49,16 +50,16 @@ class SecondContentFragment : Fragment() , ContentAdapter.OnContentItemClick {
         subChapterList = SubChapterLists(context).getSecondSubChapters(chapterId!!)
         val current = subChapterList[sectionNumber!! - 1]
 
-//        contentList = ContentLists(context).getSecondVolumeContents(current.subChapterId)
-//        contentAdapter = ContentAdapter(context, contentList, this)
+        contentList = ContentLists(context).getSecondVolumeContents(current.subChapterId)
+        contentAdapter = ContentAdapter(context, contentList, this)
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_second_content, container, false)
 
         val verticalLayout = LinearLayoutManager(context)
-//        binding.rvSecondVolumeContent.layoutManager = verticalLayout
-//        binding.rvSecondVolumeContent.adapter = contentAdapter
+        binding.rvSecondVolumeContent.layoutManager = verticalLayout
+        binding.rvSecondVolumeContent.adapter = contentAdapter
 
         return binding.root
     }
