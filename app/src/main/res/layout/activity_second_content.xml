@@ -102,15 +102,15 @@
 
                 <Button
                     android:id="@+id/btnPrevious"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:layout_marginEnd="8dp"
                     android:background="@drawable/state_previous" />
 
                 <ToggleButton
                     android:id="@+id/btnPlay"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:layout_marginEnd="8dp"
                     android:background="@drawable/state_play_pause"
                     android:text=""
@@ -119,21 +119,21 @@
 
                 <Button
                     android:id="@+id/btnNext"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:layout_marginEnd="8dp"
                     android:background="@drawable/state_next" />
 
-                <SeekBar
+                <View
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="0dp"
                     android:layout_marginEnd="8dp"
                     android:layout_weight="1" />
 
                 <ToggleButton
                     android:id="@+id/btnRepeat"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:layout_marginEnd="8dp"
                     android:background="@drawable/state_repeat"
                     android:text=""
@@ -142,8 +142,8 @@
 
                 <ToggleButton
                     android:id="@+id/btnSerialPlay"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:background="@drawable/state_serial_play"
                     android:text=""
                     android:textOff=""
