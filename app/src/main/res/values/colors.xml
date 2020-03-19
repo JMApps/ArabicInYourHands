@@ -7,10 +7,11 @@
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
     <color name="main">#212121</color>
+    <color name="reMain">#FFFFFF</color>
     <color name="gray">#626262</color>
     <color name="lightGray">#DADADA</color>
     <color name="colorId">#9C27B0</color>
-    <color name="lightColorId">#EDE7F6</color>
+    <color name="lightColorId">#E1BEE7</color>
     <color name="lightAccent">#FFB74D</color>
     <color name="cardViewBackground">#FFFFFF</color>
     <color name="mainBackground">#FFFFFF</color>
