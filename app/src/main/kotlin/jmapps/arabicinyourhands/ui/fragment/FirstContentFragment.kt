@@ -1,5 +1,6 @@
 package jmapps.arabicinyourhands.ui.fragment
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -24,6 +25,8 @@ class FirstContentFragment : Fragment(), ContentAdapter.OnContentItemClick {
     private lateinit var subChapterList: MutableList<SubChapterModel>
     private lateinit var contentList: MutableList<ContentModel>
     private lateinit var contentAdapter: ContentAdapter
+
+    private lateinit var itemPlayClick: ItemPlayClick
 
     companion object {
 
@@ -52,6 +55,7 @@ class FirstContentFragment : Fragment(), ContentAdapter.OnContentItemClick {
 
         contentList = ContentLists(context).getFirstVolumeContents(current.subChapterId)
         contentAdapter = ContentAdapter(context, contentList, this)
+
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -65,6 +69,20 @@ class FirstContentFragment : Fragment(), ContentAdapter.OnContentItemClick {
     }
 
     override fun onItemClick(contentId: Int, contentPosition: Int) {
+        itemPlayClick.itemPlay(contentPosition)
+        contentAdapter.itemSelected(contentPosition)
+    }
 
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        if (context is ItemPlayClick) {
+            itemPlayClick = context
+        } else {
+            throw RuntimeException("$context must implement ItemPlayClick")
+        }
+    }
+
+    interface ItemPlayClick {
+        fun itemPlay(contentPosition: Int)
     }
 }
