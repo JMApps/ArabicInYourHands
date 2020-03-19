@@ -26,6 +26,8 @@ class SecondContentActivity : AppCompatActivity(), ViewPager.OnPageChangeListene
         binding = DataBindingUtil.setContentView(this, R.layout.activity_second_content)
         setSupportActionBar(binding.toolbar)
 
+        LockOrientation(this).lock()
+
         val actionBar = supportActionBar
         actionBar?.setDisplayHomeAsUpEnabled(true)
 
