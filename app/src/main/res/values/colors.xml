@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#9C27B0</color>
-    <color name="colorPrimaryDark">#9C27B0</color>
+    <color name="colorPrimary">#AB47BC</color>
+    <color name="colorPrimaryDark">#AB47BC</color>
     <color name="colorAccent">#FFA000</color>
 
     <color name="white">#FFFFFF</color>
@@ -10,7 +10,7 @@
     <color name="reMain">#FFFFFF</color>
     <color name="gray">#626262</color>
     <color name="lightGray">#DADADA</color>
-    <color name="colorId">#9C27B0</color>
+    <color name="colorId">#AB47BC</color>
     <color name="lightColorId">#E1BEE7</color>
     <color name="lightAccent">#FFB74D</color>
     <color name="cardViewBackground">#FFFFFF</color>
