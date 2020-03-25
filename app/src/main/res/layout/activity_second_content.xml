@@ -54,16 +54,11 @@
                         android:layout_height="wrap_content"
                         android:paddingLeft="16dp"
                         android:paddingRight="16dp"
+                        android:paddingBottom="8dp"
                         android:textColor="@color/white"
                         android:textSize="18sp"
                         app:layout_collapseMode="parallax"
                         tools:text="Ас-Саляму аляй-кум!" />
-
-                    <com.afollestad.viewpagerdots.DotsIndicator
-                        android:id="@+id/diSecondContent"
-                        android:layout_width="match_parent"
-                        android:layout_height="16dp"
-                        android:layout_margin="8dp" />
                 </LinearLayout>
 
                 <androidx.appcompat.widget.Toolbar
@@ -76,11 +71,14 @@
             </com.google.android.material.appbar.CollapsingToolbarLayout>
         </com.google.android.material.appbar.AppBarLayout>
 
-        <androidx.viewpager.widget.ViewPager
-            android:id="@+id/vpSecondContentContainer"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvSecondVolumeContent"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+            android:scrollbarThumbVertical="@drawable/thumb_line_background"
+            android:scrollbars="vertical"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            tools:listitem="@layout/item_content" />
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottomNavigationContent"
@@ -90,7 +88,6 @@
             android:layout_gravity="bottom"
             android:background="@color/colorPrimary"
             android:overScrollMode="always"
-            app:labelVisibilityMode="unlabeled"
             app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior">
 
             <LinearLayout
@@ -108,7 +105,7 @@
                     android:background="@drawable/state_previous" />
 
                 <ToggleButton
-                    android:id="@+id/btnPlay"
+                    android:id="@+id/tbPlay"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_marginEnd="8dp"
@@ -131,7 +128,7 @@
                     android:layout_weight="1" />
 
                 <ToggleButton
-                    android:id="@+id/btnRepeat"
+                    android:id="@+id/tbRepeat"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_marginEnd="8dp"
@@ -141,7 +138,7 @@
                     android:textOn="" />
 
                 <ToggleButton
-                    android:id="@+id/btnSerialPlay"
+                    android:id="@+id/tbSerialPlay"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:background="@drawable/state_serial_play"
