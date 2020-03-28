@@ -16,8 +16,8 @@
 
     <string name="action_text_size_arabic">Размер арабского текста</string>
     <string name="action_text_size_translation">Размер текста перевода</string>
-    <string name="action_peace_test_arabic">السلام عليكم</string>
-    <string name="action_peace_test_translation">Ас-Саляму `Аляй-кум</string>
+    <string name="action_arabic_font">Шрифт арабского текста</string>
+    <string name="action_translation_font">Шрифт текста перевода</string>
     <string name="action_show_arabic">Отображать арабский текст</string>
     <string name="action_show_translation">Отображать перевод</string>
 
@@ -37,4 +37,5 @@
 
     <string name="title_activity_content">К главам</string>
     <string name="title_activity_second_content">К главам</string>
+
 </resources>
