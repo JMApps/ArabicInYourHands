@@ -25,6 +25,7 @@ class FirstContentActivity : AppCompatActivity(), View.OnClickListener,
 
     private var chapterId: Int? = null
     private var subChapterId: Int? = null
+    private var subChapterPosition: Int? = null
 
     private lateinit var subChapterList: MutableList<SubChapterModel>
     private lateinit var contentList: MutableList<ContentModel>
@@ -44,7 +45,7 @@ class FirstContentActivity : AppCompatActivity(), View.OnClickListener,
         actionBar?.setDisplayHomeAsUpEnabled(true)
 
         getIdsFromIntent()
-        initTextViewsInAppBar(chapterId!!, subChapterId!!)
+        initTextViewsInAppBar(chapterId!!, subChapterPosition!!)
         initContentList(subChapterId!!)
 
         binding.btnNext.setOnClickListener(this)
@@ -65,11 +66,12 @@ class FirstContentActivity : AppCompatActivity(), View.OnClickListener,
     private fun getIdsFromIntent() {
         chapterId = intent?.getIntExtra("key_first_chapter_id", 1)
         subChapterId = intent?.getIntExtra("key_first_sub_chapter_id", 1)
+        subChapterPosition = intent?.getIntExtra("key_first_sub_chapter_position", 1)
     }
 
-    private fun initTextViewsInAppBar(chapterId: Int, subChapterId: Int) {
+    private fun initTextViewsInAppBar(chapterId: Int, subChapterPosition: Int) {
         subChapterList = SubChapterLists(this).getFirstSubChapters(chapterId)
-        val currentText = subChapterList[subChapterId - 1]
+        val currentText = subChapterList[subChapterPosition]
         binding.tvDialog.text = currentText.dialog
         binding.tvDialogTitle.text = currentText.dialogTitle
     }

@@ -44,15 +44,15 @@ class SecondContentActivity : AppCompatActivity(), ContentAdapter.OnContentItemC
         actionBar?.setDisplayHomeAsUpEnabled(true)
 
         getIdsFromIntent()
-        initTextViewsInAppBar(chapterId!!, subChapterId!!)
+        initTextViewsInAppBar(chapterId!!, subChapterPosition!!)
         initContentList(subChapterId!!)
 
-        binding.btnNext.setOnClickListener(this)
-        binding.btnPrevious.setOnClickListener(this)
-
-        binding.tbPlay.setOnCheckedChangeListener(this)
-        binding.tbRepeat.setOnCheckedChangeListener(this)
-        binding.tbSerialPlay.setOnCheckedChangeListener(this)
+//        binding.btnNext.setOnClickListener(this)
+//        binding.btnPrevious.setOnClickListener(this)
+//
+//        binding.tbPlay.setOnCheckedChangeListener(this)
+//        binding.tbRepeat.setOnCheckedChangeListener(this)
+//        binding.tbSerialPlay.setOnCheckedChangeListener(this)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -68,9 +68,9 @@ class SecondContentActivity : AppCompatActivity(), ContentAdapter.OnContentItemC
         subChapterPosition = intent?.getIntExtra("key_second_sub_chapter_position", 1)
     }
 
-    private fun initTextViewsInAppBar(chapterId: Int, subChapterId: Int) {
+    private fun initTextViewsInAppBar(chapterId: Int, subChapterPosition: Int) {
         subChapterList = SubChapterLists(this).getSecondSubChapters(chapterId)
-        val currentText = subChapterList[subChapterId]
+        val currentText = subChapterList[subChapterPosition]
         binding.tvDialog.text = currentText.dialog
         binding.tvDialogTitle.text = currentText.dialogTitle
     }
@@ -108,8 +108,8 @@ class SecondContentActivity : AppCompatActivity(), ContentAdapter.OnContentItemC
     }
 
     override fun onItemClick(contentId: Int, contentPosition: Int) {
-        onePlay(contentPosition)
-        contentAdapter.itemSelected(contentPosition)
+        //onePlay(contentPosition)
+        //contentAdapter.itemSelected(contentPosition)
     }
 
     override fun onCompletion(mp: MediaPlayer?) {

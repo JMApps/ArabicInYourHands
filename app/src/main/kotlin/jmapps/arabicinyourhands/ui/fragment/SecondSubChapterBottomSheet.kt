@@ -70,6 +70,5 @@ class SecondSubChapterBottomSheet() : BottomSheetDialogFragment(),
         toSecondContentActivity.putExtra("key_second_sub_chapter_id", subChapterId)
         toSecondContentActivity.putExtra("key_second_sub_chapter_position", subChapterPosition)
         startActivity(toSecondContentActivity)
-        dialog?.dismiss()
     }
 }

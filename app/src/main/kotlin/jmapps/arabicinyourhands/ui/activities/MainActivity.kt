@@ -5,6 +5,7 @@ import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.Switch
+import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
@@ -122,6 +123,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         isNightMode(state)
         swNightMode.isChecked = state
         editor.putBoolean("key_night_mode", state).apply()
+        binding.mainAppBar.bottomNavigationMain.selectedItemId = R.id.bottom_nav_first_volume
     }
 
     override fun isNightMode(state: Boolean) {
@@ -143,7 +145,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
     override fun secondSubChapterItem(chapterId: Int) {
-        val secondSubChapterBottomSheet = SecondSubChapterBottomSheet.newInstance(chapterId)
-        secondSubChapterBottomSheet.show(supportFragmentManager, SecondSubChapterBottomSheet.secondSubChapterTag)
+        if (chapterId <= 8) {
+            val secondSubChapterBottomSheet = SecondSubChapterBottomSheet.newInstance(chapterId)
+            secondSubChapterBottomSheet.show(supportFragmentManager, SecondSubChapterBottomSheet.secondSubChapterTag)
+        } else {
+            Toast.makeText(this, "Не готово", Toast.LENGTH_SHORT).show()
+        }
     }
 }
