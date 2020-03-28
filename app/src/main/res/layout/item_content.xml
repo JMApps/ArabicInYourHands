@@ -30,16 +30,14 @@
                 android:id="@+id/tvArabicName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:textSize="18sp" />
+                android:gravity="center" />
 
             <TextView
                 android:id="@+id/tvArabicContent"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:textColor="@color/colorId"
-                android:textSize="18sp" />
+                android:textColor="@color/colorId" />
         </LinearLayout>
 
         <View
@@ -61,16 +59,14 @@
                 android:id="@+id/tvTranslationName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:textSize="18sp" />
+                android:gravity="center" />
 
             <TextView
                 android:id="@+id/tvTranslationContent"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:textColor="@color/main"
-                android:textSize="18sp" />
+                android:textColor="@color/main" />
         </LinearLayout>
     </LinearLayout>
 </androidx.cardview.widget.CardView>

@@ -39,7 +39,7 @@
                 android:layout_marginTop="16dp"
                 android:text="@string/action_text_size_arabic"
                 android:textColor="@color/main"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvToolsDescription" />
 
@@ -75,7 +75,7 @@
                 android:layout_marginTop="16dp"
                 android:text="@string/action_text_size_translation"
                 android:textColor="@color/main"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/sbTextSizeArabic" />
 
@@ -109,11 +109,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
-                android:text="@string/action_peace_test_arabic"
-                android:textColor="@color/colorAccent"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="parent"
+                android:text="@string/action_arabic_font"
+                android:textColor="@color/main"
+                android:textSize="18sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/sbTextSizeTranslation" />
 
@@ -153,11 +151,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
-                android:text="@string/action_peace_test_translation"
-                android:textColor="@color/colorAccent"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="parent"
+                android:text="@string/action_translation_font"
+                android:textColor="@color/main"
+                android:textSize="18sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/rgFontArabic" />
 
@@ -199,6 +195,7 @@
                 android:switchPadding="16sp"
                 android:text="@string/action_show_arabic"
                 android:textColor="@color/main"
+                android:textSize="18sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/rgFontTranslation" />
 
@@ -212,6 +209,7 @@
                 android:switchPadding="16sp"
                 android:text="@string/action_show_translation"
                 android:textColor="@color/main"
+                android:textSize="18sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/swShowArabic" />
