@@ -2,6 +2,7 @@ package jmapps.arabicinyourhands.ui.activities
 
 import android.media.MediaPlayer
 import android.os.Bundle
+import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.CompoundButton
@@ -14,6 +15,7 @@ import jmapps.arabicinyourhands.data.database.content.ContentLists
 import jmapps.arabicinyourhands.data.database.lists.SubChapterLists
 import jmapps.arabicinyourhands.databinding.ActivityFirstContentBinding
 import jmapps.arabicinyourhands.ui.adapter.ContentAdapter
+import jmapps.arabicinyourhands.ui.fragment.ToolsBottomSheet
 import jmapps.arabicinyourhands.ui.model.ContentModel
 import jmapps.arabicinyourhands.ui.model.SubChapterModel
 
@@ -56,9 +58,19 @@ class FirstContentActivity : AppCompatActivity(), View.OnClickListener,
         binding.tbSerialPlay.setOnCheckedChangeListener(this)
     }
 
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_first_content, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             android.R.id.home -> finish()
+
+            R.id.action_tools -> {
+                val toolsBottomSheet = ToolsBottomSheet()
+                toolsBottomSheet.show(supportFragmentManager, ToolsBottomSheet.ToolsTag)
+            }
         }
         return super.onOptionsItemSelected(item)
     }
@@ -87,8 +99,10 @@ class FirstContentActivity : AppCompatActivity(), View.OnClickListener,
     private fun initPlayer(playIndex: Int) {
         binding.appBar.setExpanded(false, true)
         clearPlayer()
-        val resId: Int? = resources?.getIdentifier(contentList[playIndex].NameAudio,
-            "raw", "jmapps.arabicinyourhands")
+        val resId: Int? = resources?.getIdentifier(
+            contentList[playIndex].NameAudio,
+            "raw", "jmapps.arabicinyourhands"
+        )
         player = MediaPlayer.create(this, resId!!)
         player?.setOnCompletionListener(this)
         binding.rvFirstVolumeContent.smoothScrollToPosition(playIndex)
@@ -97,14 +111,16 @@ class FirstContentActivity : AppCompatActivity(), View.OnClickListener,
 
     private fun onePlay(playIndex: Int) {
         clearPlayer()
-        val resId: Int? = resources?.getIdentifier(contentList[playIndex].NameAudio,
-            "raw", "jmapps.arabicinyourhands")
+        val resId: Int? = resources?.getIdentifier(
+            contentList[playIndex].NameAudio,
+            "raw", "jmapps.arabicinyourhands"
+        )
         player = MediaPlayer.create(this, resId!!)
         player?.start()
         player?.setOnCompletionListener {
             player = null
             binding.tbPlay.isChecked = false
-            contentAdapter.itemSelected(- 1)
+            contentAdapter.itemSelected(-1)
         }
     }
 
@@ -136,7 +152,7 @@ class FirstContentActivity : AppCompatActivity(), View.OnClickListener,
                 binding.tbPlay.isChecked = true
                 player?.start()
             } else {
-                contentAdapter.itemSelected(- 1)
+                contentAdapter.itemSelected(-1)
                 binding.rvFirstVolumeContent.smoothScrollToPosition(0)
                 binding.appBar.setExpanded(true, true)
                 playIndex = 0
@@ -198,12 +214,20 @@ class FirstContentActivity : AppCompatActivity(), View.OnClickListener,
 
             R.id.tbSerialPlay -> {
                 if (isChecked) {
-                    Toast.makeText(this, "Последовательное воспроизведение вкл.", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(
+                        this,
+                        "Последовательное воспроизведение вкл.",
+                        Toast.LENGTH_SHORT
+                    ).show()
                     if (binding.tbRepeat.isChecked) {
                         binding.tbRepeat.isChecked = false
                     }
                 } else {
-                    Toast.makeText(this, "Последовательное воспроизведение выкл.", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(
+                        this,
+                        "Последовательное воспроизведение выкл.",
+                        Toast.LENGTH_SHORT
+                    ).show()
                 }
             }
         }

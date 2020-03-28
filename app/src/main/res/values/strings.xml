@@ -18,6 +18,7 @@
     <string name="action_text_size_translation">Размер текста перевода</string>
     <string name="action_peace_test_arabic">السلام عليكم</string>
     <string name="action_peace_test_translation">Ас-Саляму `Аляй-кум</string>
+    <string name="action_show_arabic">Отображать арабский текст</string>
     <string name="action_show_translation">Отображать перевод</string>
 
     <string name="about_us_text">
@@ -33,6 +34,7 @@
         По всем вопросам, предложениям и скритикой можете писать нам на почту:
         JMAppsMuslim@gmail.com или в Telegram: t.me/dev_muslim
     </string>
+
     <string name="title_activity_content">К главам</string>
     <string name="title_activity_second_content">К главам</string>
 </resources>

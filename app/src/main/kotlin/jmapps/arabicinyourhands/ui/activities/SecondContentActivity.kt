@@ -2,6 +2,7 @@ package jmapps.arabicinyourhands.ui.activities
 
 import android.media.MediaPlayer
 import android.os.Bundle
+import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.CompoundButton
@@ -14,6 +15,7 @@ import jmapps.arabicinyourhands.data.database.content.ContentLists
 import jmapps.arabicinyourhands.data.database.lists.SubChapterLists
 import jmapps.arabicinyourhands.databinding.ActivitySecondContentBinding
 import jmapps.arabicinyourhands.ui.adapter.ContentAdapter
+import jmapps.arabicinyourhands.ui.fragment.ToolsBottomSheet
 import jmapps.arabicinyourhands.ui.model.ContentModel
 import jmapps.arabicinyourhands.ui.model.SubChapterModel
 
@@ -55,9 +57,19 @@ class SecondContentActivity : AppCompatActivity(), ContentAdapter.OnContentItemC
 //        binding.tbSerialPlay.setOnCheckedChangeListener(this)
     }
 
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_second_content, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             android.R.id.home -> finish()
+
+            R.id.action_tools -> {
+                val toolsBottomSheet = ToolsBottomSheet()
+                toolsBottomSheet.show(supportFragmentManager, ToolsBottomSheet.ToolsTag)
+            }
         }
         return super.onOptionsItemSelected(item)
     }

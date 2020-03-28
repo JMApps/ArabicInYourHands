@@ -132,17 +132,17 @@
                 app:layout_constraintTop_toBottomOf="@+id/tvPeaceTestArabic">
 
                 <RadioButton
-                    android:id="@+id/radioButton"
+                    android:id="@+id/rbArabicFontOne"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
 
                 <RadioButton
-                    android:id="@+id/radioButton2"
+                    android:id="@+id/rbArabicFontTwo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
 
                 <RadioButton
-                    android:id="@+id/radioButton3"
+                    android:id="@+id/rbArabicFontThree"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
             </RadioGroup>
@@ -175,20 +175,32 @@
                 app:layout_constraintTop_toBottomOf="@+id/tvPeaceTestTranslation">
 
                 <RadioButton
-                    android:id="@+id/radioButton4"
+                    android:id="@+id/rbTranslationFontOne"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
 
                 <RadioButton
-                    android:id="@+id/radioButton5"
+                    android:id="@+id/rbTranslationFontTwo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
 
                 <RadioButton
-                    android:id="@+id/radioButton6"
+                    android:id="@+id/rbTranslationFontThree"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
             </RadioGroup>
+
+            <Switch
+                android:id="@+id/swShowArabic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:switchPadding="16sp"
+                android:text="@string/action_show_arabic"
+                android:textColor="@color/main"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rgFontTranslation" />
 
             <Switch
                 android:id="@+id/swShowTranslation"
@@ -202,7 +214,7 @@
                 android:textColor="@color/main"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/rgFontTranslation" />
+                app:layout_constraintTop_toBottomOf="@+id/swShowArabic" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
 </layout>
