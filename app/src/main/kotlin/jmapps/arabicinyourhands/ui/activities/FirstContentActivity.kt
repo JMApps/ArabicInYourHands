@@ -99,10 +99,8 @@ class FirstContentActivity : AppCompatActivity(), View.OnClickListener,
     private fun initPlayer(playIndex: Int) {
         binding.appBar.setExpanded(false, true)
         clearPlayer()
-        val resId: Int? = resources?.getIdentifier(
-            contentList[playIndex].NameAudio,
-            "raw", "jmapps.arabicinyourhands"
-        )
+        val resId: Int? = resources?.getIdentifier(contentList[playIndex].NameAudio,
+            "raw", "jmapps.arabicinyourhands")
         player = MediaPlayer.create(this, resId!!)
         player?.setOnCompletionListener(this)
         binding.rvFirstVolumeContent.smoothScrollToPosition(playIndex)
@@ -111,16 +109,14 @@ class FirstContentActivity : AppCompatActivity(), View.OnClickListener,
 
     private fun onePlay(playIndex: Int) {
         clearPlayer()
-        val resId: Int? = resources?.getIdentifier(
-            contentList[playIndex].NameAudio,
-            "raw", "jmapps.arabicinyourhands"
-        )
+        val resId: Int? = resources?.getIdentifier(contentList[playIndex].NameAudio,
+            "raw", "jmapps.arabicinyourhands")
         player = MediaPlayer.create(this, resId!!)
         player?.start()
         player?.setOnCompletionListener {
             player = null
             binding.tbPlay.isChecked = false
-            contentAdapter.itemSelected(-1)
+            contentAdapter.itemSelected(- 1)
         }
     }
 
@@ -214,20 +210,12 @@ class FirstContentActivity : AppCompatActivity(), View.OnClickListener,
 
             R.id.tbSerialPlay -> {
                 if (isChecked) {
-                    Toast.makeText(
-                        this,
-                        "Последовательное воспроизведение вкл.",
-                        Toast.LENGTH_SHORT
-                    ).show()
+                    Toast.makeText(this, "Последовательное воспроизведение вкл.", Toast.LENGTH_SHORT).show()
                     if (binding.tbRepeat.isChecked) {
                         binding.tbRepeat.isChecked = false
                     }
                 } else {
-                    Toast.makeText(
-                        this,
-                        "Последовательное воспроизведение выкл.",
-                        Toast.LENGTH_SHORT
-                    ).show()
+                    Toast.makeText(this, "Последовательное воспроизведение выкл.", Toast.LENGTH_SHORT).show()
                 }
             }
         }

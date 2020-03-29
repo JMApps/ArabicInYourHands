@@ -49,12 +49,12 @@ class SecondContentActivity : AppCompatActivity(), ContentAdapter.OnContentItemC
         initTextViewsInAppBar(chapterId!!, subChapterPosition!!)
         initContentList(subChapterId!!)
 
-//        binding.btnNext.setOnClickListener(this)
-//        binding.btnPrevious.setOnClickListener(this)
-//
-//        binding.tbPlay.setOnCheckedChangeListener(this)
-//        binding.tbRepeat.setOnCheckedChangeListener(this)
-//        binding.tbSerialPlay.setOnCheckedChangeListener(this)
+        binding.btnNext.setOnClickListener(this)
+        binding.btnPrevious.setOnClickListener(this)
+
+        binding.tbPlay.setOnCheckedChangeListener(this)
+        binding.tbRepeat.setOnCheckedChangeListener(this)
+        binding.tbSerialPlay.setOnCheckedChangeListener(this)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -120,8 +120,8 @@ class SecondContentActivity : AppCompatActivity(), ContentAdapter.OnContentItemC
     }
 
     override fun onItemClick(contentId: Int, contentPosition: Int) {
-        //onePlay(contentPosition)
-        //contentAdapter.itemSelected(contentPosition)
+        onePlay(contentPosition)
+        contentAdapter.itemSelected(contentPosition)
     }
 
     override fun onCompletion(mp: MediaPlayer?) {
