@@ -10,8 +10,8 @@ android {
         applicationId "jmapps.arabicinyourhands"
         minSdkVersion 21
         targetSdkVersion 29
-        versionCode 1
-        versionName "1.0"
+        versionCode 6
+        versionName "version 6 - global"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
