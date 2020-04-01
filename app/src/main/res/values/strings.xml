@@ -37,5 +37,8 @@
 
     <string name="title_activity_content">К главам</string>
     <string name="title_activity_second_content">К главам</string>
+    <string name="action_volume_one">Том 1</string>
+    <string name="action_volume_two">Том 2</string>
+    <string name="action_volume_three">Том 3</string>
 
 </resources>
