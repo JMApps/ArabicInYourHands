@@ -20,6 +20,7 @@
     <string name="action_translation_font">Шрифт текста перевода</string>
     <string name="action_show_arabic">Отображать арабский текст</string>
     <string name="action_show_translation">Отображать перевод</string>
+    <string name="action_show_button_share">Отображать кнопку (Поделиться)</string>
 
     <string name="about_us_text">
         <b>JMApps</b> - серия бесплатных и безрекламных андроид-приложений для мусульман.\n\n
@@ -40,5 +41,4 @@
     <string name="action_volume_one">Том 1</string>
     <string name="action_volume_two">Том 2</string>
     <string name="action_volume_three">Том 3</string>
-
 </resources>
