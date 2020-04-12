@@ -149,7 +149,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             val secondSubChapterBottomSheet = SecondSubChapterBottomSheet.newInstance(chapterId)
             secondSubChapterBottomSheet.show(supportFragmentManager, SecondSubChapterBottomSheet.secondSubChapterTag)
         } else {
-            Toast.makeText(this, "Не готово", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Пока не готово...", Toast.LENGTH_SHORT).show()
         }
     }
 }
