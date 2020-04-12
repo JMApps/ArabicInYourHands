@@ -23,7 +23,7 @@ class ContentHolder(itemView: View) : RecyclerView.ViewHolder(itemView),
     val tvArabicContent: TextView = itemView.findViewById(R.id.tvArabicContent)
     val tvTranslationName: TextView = itemView.findViewById(R.id.tvTranslationName)
     val tvTranslationContent: TextView = itemView.findViewById(R.id.tvTranslationContent)
-    val btnShareItem: Button = itemView.findViewById(R.id.btnShareItem)
+    private val btnShareItem: Button = itemView.findViewById(R.id.btnShareItem)
 
     init {
         PreferenceManager.getDefaultSharedPreferences(itemView.context).registerOnSharedPreferenceChangeListener(this)
