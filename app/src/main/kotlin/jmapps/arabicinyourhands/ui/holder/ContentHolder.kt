@@ -2,6 +2,7 @@ package jmapps.arabicinyourhands.ui.holder
 
 import android.content.SharedPreferences
 import android.view.View
+import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.preference.PreferenceManager
@@ -22,6 +23,7 @@ class ContentHolder(itemView: View) : RecyclerView.ViewHolder(itemView),
     val tvArabicContent: TextView = itemView.findViewById(R.id.tvArabicContent)
     val tvTranslationName: TextView = itemView.findViewById(R.id.tvTranslationName)
     val tvTranslationContent: TextView = itemView.findViewById(R.id.tvTranslationContent)
+    val btnShareItem: Button = itemView.findViewById(R.id.btnShareItem)
 
     init {
         PreferenceManager.getDefaultSharedPreferences(itemView.context).registerOnSharedPreferenceChangeListener(this)
@@ -34,6 +36,12 @@ class ContentHolder(itemView: View) : RecyclerView.ViewHolder(itemView),
     fun findItemClick(onContentItemClick: ContentAdapter.OnContentItemClick, contentId: Int, contentPosition: Int) {
         itemView.setOnClickListener {
             onContentItemClick.onItemClick(contentId, contentPosition)
+        }
+    }
+
+    fun findItemShareClick(onShareItemClick: ContentAdapter.OnShareItemClick, content: String) {
+        btnShareItem.setOnClickListener {
+            onShareItemClick.shareItemClick(content)
         }
     }
 
@@ -110,6 +118,7 @@ class ContentHolder(itemView: View) : RecyclerView.ViewHolder(itemView),
     private fun textsShowState() {
         val switchArabicState = preferences.getBoolean(ToolsBottomSheet.SwitchArabicShow, true)
         val switchTranslationState = preferences.getBoolean(ToolsBottomSheet.SwitchTranslationShow, true)
+        val switchShareButtonState = preferences.getBoolean(ToolsBottomSheet.SwitchShareButtonShow, true)
 
         if (switchArabicState) {
             tvArabicContent.visibility = View.VISIBLE
@@ -121,6 +130,12 @@ class ContentHolder(itemView: View) : RecyclerView.ViewHolder(itemView),
             tvTranslationContent.visibility = View.VISIBLE
         } else {
             tvTranslationContent.visibility = View.INVISIBLE
+        }
+
+        if (switchShareButtonState) {
+            btnShareItem.visibility = View.VISIBLE
+        } else {
+            btnShareItem.visibility = View.GONE
         }
     }
 }

@@ -13,13 +13,18 @@ import jmapps.arabicinyourhands.ui.model.ContentModel
 class ContentAdapter(
     private val context: Context?,
     private val contentList: MutableList<ContentModel>,
-    private val onContentItemClick: OnContentItemClick) : RecyclerView.Adapter<ContentHolder>() {
+    private val onContentItemClick: OnContentItemClick,
+    private val onShareItemClick: OnShareItemClick) : RecyclerView.Adapter<ContentHolder>() {
 
     private val inflater: LayoutInflater = LayoutInflater.from(context)
     private var currentIndex = -1
 
     interface OnContentItemClick {
         fun onItemClick(contentId: Int, contentPosition: Int)
+    }
+
+    interface OnShareItemClick {
+        fun shareItemClick(content: String)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ContentHolder {
@@ -57,7 +62,10 @@ class ContentAdapter(
         holder.tvArabicContent.text = current.ArabicContent
         holder.tvTranslationContent.text = current.TranslationContent
 
+        val content = "${current.ArabicContent}\n${current.TranslationContent}"
+
         holder.findItemClick(onContentItemClick, current.contentId, position)
+        holder.findItemShareClick(onShareItemClick, content)
     }
 
     fun itemSelected(currentIndex: Int) {

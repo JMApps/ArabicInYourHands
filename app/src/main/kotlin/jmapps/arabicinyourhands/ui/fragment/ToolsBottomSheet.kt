@@ -42,6 +42,7 @@ class ToolsBottomSheet : BottomSheetDialogFragment(), SeekBar.OnSeekBarChangeLis
 
         const val SwitchArabicShow = "KeySwitchArabicShow"
         const val SwitchTranslationShow = "KeySwitchTranslationShow"
+        const val SwitchShareButtonShow = "KeySwitchShareButtonShow"
     }
 
     @SuppressLint("CommitPrefEdits")
@@ -79,9 +80,11 @@ class ToolsBottomSheet : BottomSheetDialogFragment(), SeekBar.OnSeekBarChangeLis
 
             val switchArabicState = preferences.getBoolean(SwitchArabicShow, true)
             val switchTranslationState = preferences.getBoolean(SwitchTranslationShow, true)
+            val switchShareButtonState = preferences.getBoolean(SwitchShareButtonShow, true)
 
             swShowArabic.isChecked = switchArabicState
             swShowTranslation.isChecked = switchTranslationState
+            swShowShareButton.isChecked = switchShareButtonState
         }
 
         binding.sbTextSizeArabic.setOnSeekBarChangeListener(this)
@@ -92,6 +95,7 @@ class ToolsBottomSheet : BottomSheetDialogFragment(), SeekBar.OnSeekBarChangeLis
 
         binding.swShowArabic.setOnCheckedChangeListener(this)
         binding.swShowTranslation.setOnCheckedChangeListener(this)
+        binding.swShowShareButton.setOnCheckedChangeListener(this)
 
         return binding.root
     }
@@ -148,6 +152,10 @@ class ToolsBottomSheet : BottomSheetDialogFragment(), SeekBar.OnSeekBarChangeLis
                         binding.swShowArabic.isChecked = true
                     }
                 }
+            }
+
+            R.id.swShowShareButton -> {
+                editor.putBoolean(SwitchShareButtonShow, isChecked).apply()
             }
         }
     }

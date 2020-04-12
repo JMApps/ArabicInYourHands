@@ -1,6 +1,7 @@
 package jmapps.arabicinyourhands.ui.activities
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.content.SharedPreferences
 import android.media.MediaPlayer
 import android.os.Bundle
@@ -24,7 +25,7 @@ import jmapps.arabicinyourhands.ui.model.SubChapterModel
 
 class FirstContentActivity : AppCompatActivity(), View.OnClickListener,
     CompoundButton.OnCheckedChangeListener, MediaPlayer.OnCompletionListener,
-    ContentAdapter.OnContentItemClick {
+    ContentAdapter.OnContentItemClick, ContentAdapter.OnShareItemClick {
 
     private lateinit var binding: ActivityFirstContentBinding
     private lateinit var preferences: SharedPreferences
@@ -108,7 +109,7 @@ class FirstContentActivity : AppCompatActivity(), View.OnClickListener,
 
     private fun initContentList(subChapterId: Int) {
         contentList = ContentLists(this).getFirstVolumeContents(subChapterId)
-        contentAdapter = ContentAdapter(this, contentList, this)
+        contentAdapter = ContentAdapter(this, contentList, this, this)
         val verticalLayout = LinearLayoutManager(this)
         binding.rvFirstVolumeContent.layoutManager = verticalLayout
         binding.rvFirstVolumeContent.adapter = contentAdapter
@@ -140,6 +141,13 @@ class FirstContentActivity : AppCompatActivity(), View.OnClickListener,
     override fun onItemClick(contentId: Int, contentPosition: Int) {
         onePlay(contentPosition)
         contentAdapter.itemSelected(contentPosition)
+    }
+
+    override fun shareItemClick(content: String) {
+        val shareContent = Intent(Intent.ACTION_SEND)
+        shareContent.type = "text/plain"
+        shareContent.putExtra(Intent.EXTRA_TEXT, content)
+        startActivity(shareContent)
     }
 
     override fun onCompletion(mp: MediaPlayer?) {
