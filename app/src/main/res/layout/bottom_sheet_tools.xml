@@ -52,6 +52,9 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="16dp"
                 android:max="7"
+                android:progressBackgroundTint="@color/main"
+                android:progressTint="@color/colorId"
+                android:thumbTint="@color/colorId"
                 app:layout_constraintEnd_toStartOf="@+id/tvTextSizeArabicCounter"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvTextSizeArabicDescription" />
@@ -88,6 +91,9 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="16dp"
                 android:max="7"
+                android:progressBackgroundTint="@color/main"
+                android:progressTint="@color/colorId"
+                android:thumbTint="@color/colorId"
                 app:layout_constraintEnd_toStartOf="@+id/tvTextSizeTranslationCounter"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvTextSizeTranslationDescription" />
@@ -196,6 +202,7 @@
                 android:text="@string/action_show_arabic"
                 android:textColor="@color/main"
                 android:textSize="18sp"
+                android:thumbTint="@color/colorId"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/rgFontTranslation" />
 
@@ -209,6 +216,7 @@
                 android:text="@string/action_show_translation"
                 android:textColor="@color/main"
                 android:textSize="18sp"
+                android:thumbTint="@color/colorId"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/swShowArabic" />
 
@@ -223,6 +231,7 @@
                 android:text="@string/action_show_button_share"
                 android:textColor="@color/main"
                 android:textSize="18sp"
+                android:thumbTint="@color/colorId"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/swShowTranslation" />
