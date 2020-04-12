@@ -1,5 +1,7 @@
 package jmapps.arabicinyourhands.ui.activities
 
+import android.annotation.SuppressLint
+import android.content.SharedPreferences
 import android.media.MediaPlayer
 import android.os.Bundle
 import android.view.Menu
@@ -9,6 +11,7 @@ import android.widget.CompoundButton
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
+import androidx.preference.PreferenceManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import jmapps.arabicinyourhands.R
 import jmapps.arabicinyourhands.data.database.content.ContentLists
@@ -24,6 +27,8 @@ class FirstContentActivity : AppCompatActivity(), View.OnClickListener,
     ContentAdapter.OnContentItemClick {
 
     private lateinit var binding: ActivityFirstContentBinding
+    private lateinit var preferences: SharedPreferences
+    private lateinit var editor: SharedPreferences.Editor
 
     private var chapterId: Int? = null
     private var subChapterId: Int? = null
@@ -36,12 +41,16 @@ class FirstContentActivity : AppCompatActivity(), View.OnClickListener,
     private var player: MediaPlayer? = null
     private var playIndex: Int = 0
 
+    @SuppressLint("CommitPrefEdits")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_first_content)
         setSupportActionBar(binding.toolbar)
 
         LockOrientation(this).lock()
+
+        preferences = PreferenceManager.getDefaultSharedPreferences(this)
+        editor = preferences.edit()
 
         val actionBar = supportActionBar
         actionBar?.setDisplayHomeAsUpEnabled(true)
@@ -56,6 +65,15 @@ class FirstContentActivity : AppCompatActivity(), View.OnClickListener,
         binding.tbPlay.setOnCheckedChangeListener(this)
         binding.tbRepeat.setOnCheckedChangeListener(this)
         binding.tbSerialPlay.setOnCheckedChangeListener(this)
+
+        val switchArabicState = preferences.getBoolean(ToolsBottomSheet.SwitchArabicShow, true)
+        val switchTranslationState = preferences.getBoolean(ToolsBottomSheet.SwitchTranslationShow, true)
+
+        binding.swShowArabic.isChecked = switchArabicState
+        binding.swShowTranslation.isChecked = switchTranslationState
+
+        binding.swShowArabic.setOnCheckedChangeListener(this)
+        binding.swShowTranslation.setOnCheckedChangeListener(this)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -216,6 +234,24 @@ class FirstContentActivity : AppCompatActivity(), View.OnClickListener,
                     }
                 } else {
                     Toast.makeText(this, "Последовательное воспроизведение выкл.", Toast.LENGTH_SHORT).show()
+                }
+            }
+
+            R.id.swShowArabic -> {
+                editor.putBoolean(ToolsBottomSheet.SwitchArabicShow, isChecked).apply()
+                if (!isChecked) {
+                    if (!binding.swShowTranslation.isChecked) {
+                        binding.swShowTranslation.isChecked = true
+                    }
+                }
+            }
+
+            R.id.swShowTranslation -> {
+                editor.putBoolean(ToolsBottomSheet.SwitchTranslationShow, isChecked).apply()
+                if (!isChecked) {
+                    if (!binding.swShowArabic.isChecked) {
+                        binding.swShowArabic.isChecked = true
+                    }
                 }
             }
         }

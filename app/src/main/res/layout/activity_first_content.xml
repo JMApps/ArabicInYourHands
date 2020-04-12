@@ -127,6 +127,24 @@
                     android:layout_marginEnd="8dp"
                     android:layout_weight="1" />
 
+                <Switch
+                    android:id="@+id/swShowArabic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp" />
+
+                <Switch
+                    android:id="@+id/swShowTranslation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1" />
+
                 <ToggleButton
                     android:id="@+id/tbRepeat"
                     android:layout_width="30dp"
