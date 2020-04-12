@@ -70,5 +70,6 @@ class FirstSubChapterBottomSheet : BottomSheetDialogFragment(),
         toFirstContentActivity.putExtra("key_first_sub_chapter_id", subChapterId)
         toFirstContentActivity.putExtra("key_first_sub_chapter_position", subChapterPosition)
         startActivity(toFirstContentActivity)
+        subChapterAdapter.itemSelected(subChapterPosition)
     }
 }
