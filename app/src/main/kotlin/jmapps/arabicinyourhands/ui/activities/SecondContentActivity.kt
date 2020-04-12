@@ -133,7 +133,6 @@ class SecondContentActivity : AppCompatActivity(), ContentAdapter.OnContentItemC
         player?.setOnCompletionListener {
             player = null
             binding.tbPlay.isChecked = false
-            contentAdapter.itemSelected(- 1)
         }
     }
 

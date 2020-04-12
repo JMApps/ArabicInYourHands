@@ -134,7 +134,6 @@ class FirstContentActivity : AppCompatActivity(), View.OnClickListener,
         player?.setOnCompletionListener {
             player = null
             binding.tbPlay.isChecked = false
-            contentAdapter.itemSelected(- 1)
         }
     }
 
