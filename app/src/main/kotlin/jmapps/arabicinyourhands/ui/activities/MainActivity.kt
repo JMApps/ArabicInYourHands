@@ -145,7 +145,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
     override fun secondSubChapterItem(chapterId: Int) {
-        if (chapterId <= 8) {
+        if (chapterId <= 9) {
             val secondSubChapterBottomSheet = SecondSubChapterBottomSheet.newInstance(chapterId)
             secondSubChapterBottomSheet.show(supportFragmentManager, SecondSubChapterBottomSheet.secondSubChapterTag)
         } else {
