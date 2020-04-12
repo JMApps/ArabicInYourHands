@@ -9,6 +9,7 @@
     app:cardElevation="3dp">
 
     <LinearLayout
+        android:id="@+id/llContentItem"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="?android:selectableItemBackgroundBorderless"

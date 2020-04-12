@@ -51,7 +51,8 @@ class SecondChapterFragment : Fragment(), ChapterAdapter.OnChapterItemClick {
         fun secondSubChapterItem(chapterId: Int)
     }
 
-    override fun onItemClick(chapterId: Int) {
+    override fun onItemClick(chapterId: Int, chapterPosition: Int) {
         getSecondSubChapterItem.secondSubChapterItem(chapterId)
+        chapterAdapter.itemSelected(chapterPosition)
     }
 }
