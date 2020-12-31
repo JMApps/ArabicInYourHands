@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="main_app_text_size">20sp</dimen>
+    <dimen name="main_app_icon_size">30sp</dimen>
+    <dimen name="main_tools_icon_size">32sp</dimen>
+
+    <dimen name="main_padding_big">22dp</dimen>
+    <dimen name="main_padding">18dp</dimen>
+    <dimen name="main_padding_mini">10dp</dimen>
+
+    <dimen name="main_margin_big">22dp</dimen>
+    <dimen name="main_margin">18dp</dimen>
+    <dimen name="main_margin_mini">10dp</dimen>
+
+    <dimen name="main_item_card_radius">20dp</dimen>
+</resources>
