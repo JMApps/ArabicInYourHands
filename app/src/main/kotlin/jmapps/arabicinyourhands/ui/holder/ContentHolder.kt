@@ -5,6 +5,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.appcompat.widget.LinearLayoutCompat
 import androidx.preference.PreferenceManager
 import androidx.recyclerview.widget.RecyclerView
 import jmapps.arabicinyourhands.R
@@ -18,7 +19,7 @@ class ContentHolder(itemView: View) : RecyclerView.ViewHolder(itemView),
     private var preferences: SharedPreferences = PreferenceManager.getDefaultSharedPreferences(itemView.context)
     private var textSizeValues = (16..30).toList().filter { it % 2 == 0 }
 
-    val llContentItem: LinearLayout = itemView.findViewById(R.id.llContentItem)
+    val llContentItem: LinearLayoutCompat = itemView.findViewById(R.id.llContentItem)
     val tvArabicName: TextView = itemView.findViewById(R.id.tvArabicName)
     val tvArabicContent: TextView = itemView.findViewById(R.id.tvArabicContent)
     val tvTranslationName: TextView = itemView.findViewById(R.id.tvTranslationName)

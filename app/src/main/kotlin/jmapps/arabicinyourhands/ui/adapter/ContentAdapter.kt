@@ -40,9 +40,9 @@ class ContentAdapter(
         val current = contentList[position]
 
         if (currentIndex == position) {
-            holder.llContentItem.setBackgroundColor(ContextCompat.getColor(context!!, R.color.lightColorId))
+            holder.llContentItem.setBackgroundColor(ContextCompat.getColor(context!!, R.color.light_selected))
         } else {
-            holder.llContentItem.setBackgroundColor(ContextCompat.getColor(context!!, R.color.reMain))
+            holder.llContentItem.setBackgroundColor(ContextCompat.getColor(context!!, R.color.cardViewBackground))
         }
 
         if (!current.ArabicName.isNullOrEmpty()) {

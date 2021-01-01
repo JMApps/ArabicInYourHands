@@ -34,9 +34,9 @@ private val onSubChapterItemClick: OnSubChapterItemClick) : RecyclerView.Adapter
         val icSource = context?.resources?.getIdentifier(current.dialogPicture,"drawable", "jmapps.arabicinyourhands")
 
         if (currentIndex == position) {
-            holder.llContentItem.setBackgroundColor(ContextCompat.getColor(context!!, R.color.lightColorId))
+            holder.llContentItem.setBackgroundColor(ContextCompat.getColor(context!!, R.color.light_selected))
         } else {
-            holder.llContentItem.setBackgroundColor(ContextCompat.getColor(context!!, R.color.reMain))
+            holder.llContentItem.setBackgroundColor(ContextCompat.getColor(context!!, R.color.cardViewBackground))
         }
 
         holder.ivSubChapterIcon.setBackgroundResource(icSource!!)

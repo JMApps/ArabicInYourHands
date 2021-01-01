@@ -35,9 +35,9 @@ class ChapterAdapter(
         val icSource = context?.resources?.getIdentifier(current.chapterPicture,"drawable", "jmapps.arabicinyourhands")
 
         if (currentIndex == position) {
-            holder.llContentItem.setBackgroundColor(ContextCompat.getColor(context!!, R.color.lightColorId))
+            holder.llContentItem.setBackgroundColor(ContextCompat.getColor(context!!, R.color.light_selected))
         } else {
-            holder.llContentItem.setBackgroundColor(ContextCompat.getColor(context!!, R.color.reMain))
+            holder.llContentItem.setBackgroundColor(ContextCompat.getColor(context!!, R.color.cardViewBackground))
         }
 
         holder.tvChapterId.text = current.chapterId.toString()
