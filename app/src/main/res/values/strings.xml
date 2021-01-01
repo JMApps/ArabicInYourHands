@@ -21,6 +21,7 @@
     <string name="action_show_arabic">Отображать арабский текст</string>
     <string name="action_show_translation">Отображать перевод</string>
     <string name="action_show_button_share">Отображать кнопку (Поделиться)</string>
+    <string name="action_text_alignment">Расположение текста</string>
 
     <string name="about_us_text">
         <b>JMApps</b> - серия бесплатных и безрекламных андроид-приложений для мусульман.\n\n
