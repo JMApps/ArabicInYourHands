@@ -3,7 +3,6 @@ package jmapps.arabicinyourhands.ui.holder
 import android.content.SharedPreferences
 import android.view.View
 import android.widget.Button
-import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.widget.LinearLayoutCompat
 import androidx.preference.PreferenceManager

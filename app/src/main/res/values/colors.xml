@@ -1,18 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#AB47BC</color>
-    <color name="colorPrimaryDark">#AB47BC</color>
+    <color name="colorPrimary">#BA68C8</color>
+    <color name="colorPrimaryDark">#BA68C8</color>
     <color name="colorAccent">#FFA000</color>
 
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
+    <color name="grey">#626262</color>
+
     <color name="main">#212121</color>
-    <color name="reMain">#FFFFFF</color>
-    <color name="gray">#626262</color>
-    <color name="lightGray">#DADADA</color>
-    <color name="colorId">#AB47BC</color>
-    <color name="lightColorId">#E1BEE7</color>
-    <color name="lightAccent">#FFB74D</color>
+    <color name="mainBackground">#E8E8E8</color>
     <color name="cardViewBackground">#FFFFFF</color>
-    <color name="mainBackground">#FFFFFF</color>
+    <color name="light_selected">#F3E5F5</color>
+    <color name="color_seek_bar">#FFA000</color>
+    <color name="color_switch">#FF7043</color>
+    <color name="color_icon_tool">#FF7043</color>
+    <color name="color_title">#BA68C8</color>
+    <color name="color_names">#FFA000</color>
+    <color name="color_content_ar">#BA68C8</color>
+    <color name="color_content_ru">#212121</color>
+    <color name="color_main_icon">#FF7043</color>
 </resources>
