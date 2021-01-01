@@ -30,12 +30,12 @@
                 app:titleEnabled="false"
                 app:toolbarId="@+id/toolbar">
 
-                <LinearLayout
+                <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
-                    <TextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/tvDialog"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -48,7 +48,7 @@
                         app:layout_collapseMode="parallax"
                         tools:text="1.1. Диалог мужчин" />
 
-                    <TextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/tvDialogTitle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -59,7 +59,7 @@
                         android:textSize="18sp"
                         app:layout_collapseMode="parallax"
                         tools:text="Ас-Саляму аляй-кум!" />
-                </LinearLayout>
+                </androidx.appcompat.widget.LinearLayoutCompat>
 
                 <androidx.appcompat.widget.Toolbar
                     android:id="@+id/toolbar"
@@ -90,80 +90,80 @@
             android:overScrollMode="always"
             app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior">
 
-            <LinearLayout
+            <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
                 android:orientation="horizontal"
-                android:padding="16dp">
+                android:padding="@dimen/main_padding">
 
-                <Button
+                <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btnPrevious"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_marginEnd="8dp"
+                    android:layout_width="@dimen/main_app_icon_size"
+                    android:layout_height="@dimen/main_app_icon_size"
+                    android:layout_marginEnd="@dimen/main_margin_mini"
                     android:background="@drawable/state_previous" />
 
-                <ToggleButton
+                <androidx.appcompat.widget.AppCompatToggleButton
                     android:id="@+id/tbPlay"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_marginEnd="8dp"
+                    android:layout_width="@dimen/main_app_icon_size"
+                    android:layout_height="@dimen/main_app_icon_size"
+                    android:layout_marginEnd="@dimen/main_margin_mini"
                     android:background="@drawable/state_play_pause"
                     android:text=""
                     android:textOff=""
                     android:textOn="" />
 
-                <Button
+                <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btnNext"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_marginEnd="8dp"
+                    android:layout_width="@dimen/main_app_icon_size"
+                    android:layout_height="@dimen/main_app_icon_size"
+                    android:layout_marginEnd="@dimen/main_margin_mini"
                     android:background="@drawable/state_next" />
 
                 <View
                     android:layout_width="0dp"
                     android:layout_height="0dp"
-                    android:layout_marginEnd="8dp"
+                    android:layout_marginEnd="@dimen/main_margin_mini"
                     android:layout_weight="1" />
 
-                <Switch
+                <androidx.appcompat.widget.SwitchCompat
                     android:id="@+id/swShowArabic"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="16dp" />
+                    android:layout_marginEnd="@dimen/main_margin" />
 
-                <Switch
+                <androidx.appcompat.widget.SwitchCompat
                     android:id="@+id/swShowTranslation"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="16dp" />
+                    android:layout_marginEnd="@dimen/main_margin" />
 
                 <View
                     android:layout_width="0dp"
                     android:layout_height="0dp"
-                    android:layout_marginEnd="8dp"
+                    android:layout_marginEnd="@dimen/main_margin_mini"
                     android:layout_weight="1" />
 
-                <ToggleButton
+                <androidx.appcompat.widget.AppCompatToggleButton
                     android:id="@+id/tbRepeat"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_marginEnd="8dp"
+                    android:layout_width="@dimen/main_app_icon_size"
+                    android:layout_height="@dimen/main_app_icon_size"
+                    android:layout_marginEnd="@dimen/main_margin_mini"
                     android:background="@drawable/state_repeat"
                     android:text=""
                     android:textOff=""
                     android:textOn="" />
 
-                <ToggleButton
+                <androidx.appcompat.widget.AppCompatToggleButton
                     android:id="@+id/tbSerialPlay"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="@dimen/main_app_icon_size"
+                    android:layout_height="@dimen/main_app_icon_size"
                     android:background="@drawable/state_serial_play"
                     android:text=""
                     android:textOff=""
                     android:textOn="" />
-            </LinearLayout>
+            </androidx.appcompat.widget.LinearLayoutCompat>
         </com.google.android.material.bottomnavigation.BottomNavigationView>
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </layout>

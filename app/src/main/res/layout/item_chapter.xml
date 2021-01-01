@@ -6,61 +6,62 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="3dp"
+    app:cardCornerRadius="@dimen/main_item_card_radius"
     app:cardElevation="3dp">
 
-    <LinearLayout
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/llContentItem"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="?android:selectableItemBackgroundBorderless"
         android:gravity="center"
         android:orientation="horizontal"
-        android:padding="16dp">
+        android:padding="@dimen/main_padding">
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tvChapterId"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
+            android:layout_marginEnd="@dimen/main_margin"
             android:gravity="center"
             android:minWidth="30dp"
-            android:textSize="18sp"
+            android:textSize="@dimen/main_app_text_size"
             android:textStyle="bold"
             toolst:text="15" />
 
-        <ImageView
+        <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/ivChapterIcon"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginEnd="@dimen/main_margin"
             android:contentDescription="@null"
             toolst:src="@drawable/ic_launch" />
 
-        <LinearLayout
+        <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="vertical">
 
-            <TextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tvChapterTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="4dp"
+                android:layout_marginBottom="@dimen/main_margin_mini"
                 android:gravity="start"
-                android:textColor="@color/colorId"
-                android:textSize="16sp"
+                android:textColor="@color/color_title"
+                android:textSize="@dimen/main_app_text_size"
                 android:textStyle="bold"
                 toolst:text="Приветствие и знакомство" />
 
-            <TextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tvChapterTitleArabic"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="end"
-                android:textSize="16sp"
+                android:textSize="@dimen/main_app_text_size"
                 android:textStyle="bold"
                 toolst:text="Приветствие и знакомство" />
-        </LinearLayout>
-    </LinearLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
 </androidx.cardview.widget.CardView>

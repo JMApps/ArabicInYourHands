@@ -5,22 +5,22 @@
 
     </data>
 
-    <LinearLayout
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tvChapterName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorPrimary"
             android:drawableStart="@drawable/ic_list"
-            android:drawablePadding="16dp"
+            android:drawablePadding="@dimen/main_padding"
             android:gravity="center_vertical"
-            android:padding="16dp"
+            android:padding="@dimen/main_padding"
             android:textColor="@color/white"
-            android:textSize="18sp" />
+            android:textSize="@dimen/main_app_text_size" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvFirstSubChapter"
@@ -28,5 +28,5 @@
             android:layout_height="match_parent"
             android:scrollbarThumbVertical="@drawable/thumb_line_background"
             android:scrollbars="vertical" />
-    </LinearLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
 </layout>

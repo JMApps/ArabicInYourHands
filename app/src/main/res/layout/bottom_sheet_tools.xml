@@ -15,109 +15,115 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <TextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tvToolsDescription"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:background="@color/colorPrimary"
                 android:drawableStart="@drawable/ic_tools"
-                android:drawablePadding="16dp"
+                android:drawablePadding="@dimen/main_padding"
                 android:gravity="center_vertical"
-                android:padding="16dp"
+                android:padding="@dimen/main_padding"
                 android:text="@string/action_nav_tools"
                 android:textColor="@color/white"
-                android:textSize="20sp"
+                android:textSize="@dimen/main_app_text_size"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tvTextSizeArabicDescription"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginStart="@dimen/main_margin"
+                android:layout_marginTop="@dimen/main_margin"
+                android:drawableStart="@drawable/ic_text_size"
+                android:drawablePadding="@dimen/main_padding"
                 android:text="@string/action_text_size_arabic"
                 android:textColor="@color/main"
-                android:textSize="18sp"
+                android:textSize="@dimen/main_app_text_size"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvToolsDescription" />
 
-            <SeekBar
+            <androidx.appcompat.widget.AppCompatSeekBar
                 android:id="@+id/sbTextSizeArabic"
                 style="@style/Widget.AppCompat.SeekBar.Discrete"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="16dp"
+                android:layout_marginStart="@dimen/main_margin"
+                android:layout_marginTop="@dimen/main_margin_mini"
+                android:layout_marginEnd="@dimen/main_margin"
                 android:max="7"
                 android:progressBackgroundTint="@color/main"
-                android:progressTint="@color/colorId"
-                android:thumbTint="@color/colorId"
+                android:progressTint="@color/color_seek_bar"
+                android:thumbTint="@color/color_seek_bar"
                 app:layout_constraintEnd_toStartOf="@+id/tvTextSizeArabicCounter"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvTextSizeArabicDescription" />
 
-            <TextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tvTextSizeArabicCounter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
+                android:layout_marginEnd="@dimen/main_margin"
                 android:textColor="@color/colorAccent"
-                android:textSize="20sp"
+                android:textSize="@dimen/main_app_text_size"
                 app:layout_constraintBottom_toBottomOf="@+id/sbTextSizeArabic"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/sbTextSizeArabic" />
 
-            <TextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tvTextSizeTranslationDescription"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginStart="@dimen/main_margin"
+                android:layout_marginTop="@dimen/main_margin"
+                android:drawableStart="@drawable/ic_text_size"
+                android:drawablePadding="@dimen/main_padding"
                 android:text="@string/action_text_size_translation"
                 android:textColor="@color/main"
-                android:textSize="18sp"
+                android:textSize="@dimen/main_app_text_size"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/sbTextSizeArabic" />
 
-            <SeekBar
+            <androidx.appcompat.widget.AppCompatSeekBar
                 android:id="@+id/sbTextSizeTranslation"
                 style="@style/Widget.AppCompat.SeekBar.Discrete"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="16dp"
+                android:layout_marginStart="@dimen/main_margin"
+                android:layout_marginTop="@dimen/main_margin_mini"
+                android:layout_marginEnd="@dimen/main_margin"
                 android:max="7"
                 android:progressBackgroundTint="@color/main"
-                android:progressTint="@color/colorId"
-                android:thumbTint="@color/colorId"
+                android:progressTint="@color/color_seek_bar"
+                android:thumbTint="@color/color_seek_bar"
                 app:layout_constraintEnd_toStartOf="@+id/tvTextSizeTranslationCounter"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvTextSizeTranslationDescription" />
 
-            <TextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tvTextSizeTranslationCounter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
+                android:layout_marginEnd="@dimen/main_margin"
                 android:textColor="@color/colorAccent"
-                android:textSize="20sp"
+                android:textSize="@dimen/main_app_text_size"
                 app:layout_constraintBottom_toBottomOf="@+id/sbTextSizeTranslation"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/sbTextSizeTranslation" />
 
-            <TextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tvPeaceTestArabic"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginStart="@dimen/main_margin"
+                android:layout_marginTop="@dimen/main_margin"
+                android:drawableStart="@drawable/ic_font"
+                android:drawablePadding="@dimen/main_padding"
                 android:text="@string/action_arabic_font"
                 android:textColor="@color/main"
-                android:textSize="18sp"
+                android:textSize="@dimen/main_app_text_size"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/sbTextSizeTranslation" />
 
@@ -125,9 +131,9 @@
                 android:id="@+id/rgFontArabic"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="16dp"
+                android:layout_marginStart="@dimen/main_margin"
+                android:layout_marginTop="@dimen/main_margin_mini"
+                android:layout_marginEnd="@dimen/main_margin"
                 android:gravity="center"
                 android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -135,31 +141,39 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvPeaceTestArabic">
 
-                <RadioButton
+                <androidx.appcompat.widget.AppCompatRadioButton
                     android:id="@+id/rbArabicFontOne"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/main_margin"
+                    android:layout_marginEnd="@dimen/main_margin_mini" />
 
-                <RadioButton
+                <androidx.appcompat.widget.AppCompatRadioButton
                     android:id="@+id/rbArabicFontTwo"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/main_margin_mini"
+                    android:layout_marginEnd="@dimen/main_margin_mini" />
 
-                <RadioButton
+                <androidx.appcompat.widget.AppCompatRadioButton
                     android:id="@+id/rbArabicFontThree"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/main_margin_mini"
+                    android:layout_marginEnd="@dimen/main_margin" />
             </RadioGroup>
 
-            <TextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tvPeaceTestTranslation"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginStart="@dimen/main_margin"
+                android:layout_marginTop="@dimen/main_margin"
+                android:drawableStart="@drawable/ic_font"
+                android:drawablePadding="@dimen/main_padding"
                 android:text="@string/action_translation_font"
                 android:textColor="@color/main"
-                android:textSize="18sp"
+                android:textSize="@dimen/main_app_text_size"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/rgFontArabic" />
 
@@ -167,71 +181,132 @@
                 android:id="@+id/rgFontTranslation"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="16dp"
+                android:layout_marginStart="@dimen/main_margin"
+                android:layout_marginTop="@dimen/main_margin_mini"
+                android:layout_marginEnd="@dimen/main_margin"
                 android:gravity="center"
                 android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvPeaceTestTranslation">
 
-                <RadioButton
+                <androidx.appcompat.widget.AppCompatRadioButton
                     android:id="@+id/rbTranslationFontOne"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/main_margin"
+                    android:layout_marginEnd="@dimen/main_margin_mini" />
 
-                <RadioButton
+                <androidx.appcompat.widget.AppCompatRadioButton
                     android:id="@+id/rbTranslationFontTwo"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/main_margin_mini"
+                    android:layout_marginEnd="@dimen/main_margin_mini" />
 
-                <RadioButton
+                <androidx.appcompat.widget.AppCompatRadioButton
                     android:id="@+id/rbTranslationFontThree"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/main_margin_mini"
+                    android:layout_marginEnd="@dimen/main_margin" />
             </RadioGroup>
 
-            <Switch
-                android:id="@+id/swShowArabic"
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTextAlignmentDescription"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:switchPadding="16sp"
-                android:text="@string/action_show_arabic"
+                android:layout_marginStart="@dimen/main_margin"
+                android:layout_marginTop="@dimen/main_margin"
+                android:drawableStart="@drawable/ic_alignment_tools"
+                android:drawablePadding="@dimen/main_padding"
+                android:text="@string/action_text_alignment"
                 android:textColor="@color/main"
-                android:textSize="18sp"
-                android:thumbTint="@color/colorId"
+                android:textSize="@dimen/main_app_text_size"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/rgFontTranslation" />
 
-            <Switch
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/main_margin"
+                android:layout_marginTop="@dimen/main_margin"
+                android:layout_marginEnd="@dimen/main_margin"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvTextAlignmentDescription">
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/main_margin"
+                    android:layout_marginEnd="@dimen/main_margin_big"
+                    android:button="@drawable/ic_alignment_left" />
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/main_margin_big"
+                    android:layout_marginEnd="@dimen/main_margin_big"
+                    android:button="@drawable/ic_alignment_center" />
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/main_margin_big"
+                    android:layout_marginEnd="@dimen/main_margin"
+                    android:button="@drawable/ic_alignment_right" />
+            </RadioGroup>
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/swShowArabic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/main_margin"
+                android:layout_marginTop="@dimen/main_margin"
+                android:drawableStart="@drawable/state_show"
+                android:drawablePadding="@dimen/main_padding"
+                android:switchPadding="@dimen/main_margin"
+                android:text="@string/action_show_arabic"
+                android:textColor="@color/main"
+                android:textSize="@dimen/main_app_text_size"
+                android:thumbTint="@color/color_switch"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+            <androidx.appcompat.widget.SwitchCompat
                 android:id="@+id/swShowTranslation"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:switchPadding="16sp"
+                android:layout_marginStart="@dimen/main_margin"
+                android:layout_marginTop="@dimen/main_margin"
+                android:drawableStart="@drawable/state_show"
+                android:drawablePadding="@dimen/main_padding"
+                android:switchPadding="@dimen/main_padding"
                 android:text="@string/action_show_translation"
                 android:textColor="@color/main"
-                android:textSize="18sp"
-                android:thumbTint="@color/colorId"
+                android:textSize="@dimen/main_app_text_size"
+                android:thumbTint="@color/color_switch"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/swShowArabic" />
 
-            <Switch
+            <androidx.appcompat.widget.SwitchCompat
                 android:id="@+id/swShowShareButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="24dp"
-                android:switchPadding="16sp"
+                android:layout_marginStart="@dimen/main_margin"
+                android:layout_marginTop="@dimen/main_margin"
+                android:layout_marginBottom="@dimen/main_margin_big"
+                android:drawableStart="@drawable/state_show"
+                android:drawablePadding="@dimen/main_padding"
+                android:switchPadding="@dimen/main_padding"
                 android:text="@string/action_show_button_share"
                 android:textColor="@color/main"
-                android:textSize="18sp"
-                android:thumbTint="@color/colorId"
+                android:textSize="@dimen/main_app_text_size"
+                android:thumbTint="@color/color_switch"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/swShowTranslation" />
