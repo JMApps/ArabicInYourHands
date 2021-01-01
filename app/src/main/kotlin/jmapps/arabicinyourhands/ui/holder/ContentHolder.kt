@@ -1,6 +1,7 @@
 package jmapps.arabicinyourhands.ui.holder
 
 import android.content.SharedPreferences
+import android.view.Gravity
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
@@ -11,6 +12,7 @@ import jmapps.arabicinyourhands.R
 import jmapps.arabicinyourhands.data.file.TypeFace
 import jmapps.arabicinyourhands.ui.adapter.ContentAdapter
 import jmapps.arabicinyourhands.ui.fragment.ToolsBottomSheet
+import jmapps.arabicinyourhands.ui.fragment.ToolsBottomSheet.Companion.AlignmentLeft
 
 class ContentHolder(itemView: View) : RecyclerView.ViewHolder(itemView),
     SharedPreferences.OnSharedPreferenceChangeListener {
@@ -31,6 +33,7 @@ class ContentHolder(itemView: View) : RecyclerView.ViewHolder(itemView),
         textArabicFont()
         textTranslationFont()
         textsShowState()
+        textAlignment()
     }
 
     fun findItemClick(onContentItemClick: ContentAdapter.OnContentItemClick, contentId: Int, contentPosition: Int) {
@@ -50,6 +53,7 @@ class ContentHolder(itemView: View) : RecyclerView.ViewHolder(itemView),
         textArabicFont()
         textTranslationFont()
         textsShowState()
+        textAlignment()
     }
 
     private fun textSizes() {
@@ -115,20 +119,54 @@ class ContentHolder(itemView: View) : RecyclerView.ViewHolder(itemView),
         tvTranslationContent.typeface = TypeFace()[itemView.context!!, font]
     }
 
+    private fun textAlignment() {
+        val alignmentLeft = preferences.getBoolean(AlignmentLeft, false)
+        val alignmentCenter = preferences.getBoolean(ToolsBottomSheet.AlignmentCenter, true)
+        val alignmentRight = preferences.getBoolean(ToolsBottomSheet.AlignmentRight, false)
+
+        when (true) {
+
+            alignmentLeft -> {
+                tvArabicName.gravity = Gravity.END
+                tvArabicContent.gravity = Gravity.END
+                tvTranslationName.gravity = Gravity.START
+                tvTranslationContent.gravity = Gravity.START
+            }
+
+            alignmentCenter -> {
+                tvArabicName.gravity = Gravity.CENTER
+                tvArabicContent.gravity = Gravity.CENTER
+                tvTranslationName.gravity = Gravity.CENTER
+                tvTranslationContent.gravity = Gravity.CENTER
+            }
+
+            alignmentRight -> {
+                tvArabicName.gravity = Gravity.START
+                tvArabicContent.gravity = Gravity.START
+                tvTranslationName.gravity = Gravity.END
+                tvTranslationContent.gravity = Gravity.END
+            }
+        }
+    }
+
     private fun textsShowState() {
         val switchArabicState = preferences.getBoolean(ToolsBottomSheet.SwitchArabicShow, true)
         val switchTranslationState = preferences.getBoolean(ToolsBottomSheet.SwitchTranslationShow, true)
         val switchShareButtonState = preferences.getBoolean(ToolsBottomSheet.SwitchShareButtonShow, true)
 
         if (switchArabicState) {
+            tvArabicName.visibility = View.VISIBLE
             tvArabicContent.visibility = View.VISIBLE
         } else {
+            tvArabicName.visibility = View.INVISIBLE
             tvArabicContent.visibility = View.INVISIBLE
         }
 
         if (switchTranslationState) {
+            tvTranslationName.visibility = View.VISIBLE
             tvTranslationContent.visibility = View.VISIBLE
         } else {
+            tvTranslationName.visibility = View.INVISIBLE
             tvTranslationContent.visibility = View.INVISIBLE
         }
 

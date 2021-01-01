@@ -227,7 +227,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/rgFontTranslation" />
 
             <RadioGroup
-                android:id="@+id/radioGroup"
+                android:id="@+id/rgTextAlignment"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/main_margin"
@@ -240,6 +240,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/tvTextAlignmentDescription">
 
                 <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/rbAlignmentLeft"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/main_margin"
@@ -247,6 +248,7 @@
                     android:button="@drawable/ic_alignment_left" />
 
                 <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/rbAlignmentCenter"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/main_margin_big"
@@ -254,6 +256,7 @@
                     android:button="@drawable/ic_alignment_center" />
 
                 <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/rbAlignmentRight"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/main_margin_big"
@@ -275,7 +278,7 @@
                 android:textSize="@dimen/main_app_text_size"
                 android:thumbTint="@color/color_switch"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+                app:layout_constraintTop_toBottomOf="@+id/rgTextAlignment" />
 
             <androidx.appcompat.widget.SwitchCompat
                 android:id="@+id/swShowTranslation"

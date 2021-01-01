@@ -4,14 +4,14 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 
 android {
-    compileSdkVersion 29
+    compileSdkVersion 30
     buildToolsVersion "29.0.3"
     defaultConfig {
         applicationId "jmapps.arabicinyourhands"
         minSdkVersion 21
-        targetSdkVersion 29
-        versionCode 7
-        versionName "version 7 - selected improvements"
+        targetSdkVersion 30
+        versionCode 8
+        versionName "2.0.0 - mini global"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 

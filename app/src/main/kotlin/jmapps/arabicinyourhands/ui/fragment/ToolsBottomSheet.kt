@@ -40,6 +40,10 @@ class ToolsBottomSheet : BottomSheetDialogFragment(), SeekBar.OnSeekBarChangeLis
         const val TranslationFontTwo = "KeyTranslationFontTwo"
         const val TranslationFontThree = "KeyTranslationFontThree"
 
+        const val AlignmentLeft = "KeyAlignmentLeft"
+        const val AlignmentCenter = "KeyAlignmentCenter"
+        const val AlignmentRight = "KeyAlignmentRight"
+
         const val SwitchArabicShow = "KeySwitchArabicShow"
         const val SwitchTranslationShow = "KeySwitchTranslationShow"
         const val SwitchShareButtonShow = "KeySwitchShareButtonShow"
@@ -52,6 +56,22 @@ class ToolsBottomSheet : BottomSheetDialogFragment(), SeekBar.OnSeekBarChangeLis
         preferences = PreferenceManager.getDefaultSharedPreferences(context)
         editor = preferences.edit()
 
+        val arabicFontOne = preferences.getBoolean(ArabicFontOne, true)
+        val arabicFontTwo = preferences.getBoolean(ArabicFontTwo, false)
+        val arabicFontThree = preferences.getBoolean(ArabicFontThree, false)
+
+        val translationFontOne = preferences.getBoolean(TranslationFontOne, true)
+        val translationFontTwo = preferences.getBoolean(TranslationFontTwo, false)
+        val translationFontThree = preferences.getBoolean(TranslationFontThree, false)
+
+        val alignmentLeft = preferences.getBoolean(AlignmentLeft, false)
+        val alignmentCenter = preferences.getBoolean(AlignmentCenter, true)
+        val alignmentRight = preferences.getBoolean(AlignmentRight, false)
+
+        val switchArabicState = preferences.getBoolean(SwitchArabicShow, true)
+        val switchTranslationState = preferences.getBoolean(SwitchTranslationShow, true)
+        val switchShareButtonState = preferences.getBoolean(SwitchShareButtonShow, true)
+
         binding.apply {
             val arabicProgress = preferences.getInt(ArabicTextSize, 1)
             val translationProgress = preferences.getInt(TranslationTextSize, 1)
@@ -62,25 +82,17 @@ class ToolsBottomSheet : BottomSheetDialogFragment(), SeekBar.OnSeekBarChangeLis
             tvTextSizeArabicCounter.text = textSizeValues[arabicProgress].toString()
             tvTextSizeTranslationCounter.text = textSizeValues[translationProgress].toString()
 
-            val arabicFontOne = preferences.getBoolean(ArabicFontOne, true)
-            val arabicFontTwo = preferences.getBoolean(ArabicFontTwo, false)
-            val arabicFontThree = preferences.getBoolean(ArabicFontThree, false)
-
-            val translationFontOne = preferences.getBoolean(TranslationFontOne, true)
-            val translationFontTwo = preferences.getBoolean(TranslationFontTwo, false)
-            val translationFontThree = preferences.getBoolean(TranslationFontThree, false)
-
             rbArabicFontOne.isChecked = arabicFontOne
             rbArabicFontTwo.isChecked = arabicFontTwo
             rbArabicFontThree.isChecked = arabicFontThree
 
+            rbAlignmentLeft.isChecked = alignmentLeft
+            rbAlignmentCenter.isChecked = alignmentCenter
+            rbAlignmentRight.isChecked = alignmentRight
+
             rbTranslationFontOne.isChecked = translationFontOne
             rbTranslationFontTwo.isChecked = translationFontTwo
             rbTranslationFontThree.isChecked = translationFontThree
-
-            val switchArabicState = preferences.getBoolean(SwitchArabicShow, true)
-            val switchTranslationState = preferences.getBoolean(SwitchTranslationShow, true)
-            val switchShareButtonState = preferences.getBoolean(SwitchShareButtonShow, true)
 
             swShowArabic.isChecked = switchArabicState
             swShowTranslation.isChecked = switchTranslationState
@@ -92,6 +104,7 @@ class ToolsBottomSheet : BottomSheetDialogFragment(), SeekBar.OnSeekBarChangeLis
 
         binding.rgFontArabic.setOnCheckedChangeListener(this)
         binding.rgFontTranslation.setOnCheckedChangeListener(this)
+        binding.rgTextAlignment.setOnCheckedChangeListener(this)
 
         binding.swShowArabic.setOnCheckedChangeListener(this)
         binding.swShowTranslation.setOnCheckedChangeListener(this)
@@ -106,7 +119,6 @@ class ToolsBottomSheet : BottomSheetDialogFragment(), SeekBar.OnSeekBarChangeLis
                 binding.tvTextSizeArabicCounter.text = textSizeValues[progress].toString()
                 editor.putInt(ArabicTextSize, progress).apply()
             }
-
             R.id.sbTextSizeTranslation -> {
                 binding.tvTextSizeTranslationCounter.text = textSizeValues[progress].toString()
                 editor.putInt(TranslationTextSize, progress).apply()
@@ -125,11 +137,15 @@ class ToolsBottomSheet : BottomSheetDialogFragment(), SeekBar.OnSeekBarChangeLis
                 editor.putBoolean(ArabicFontTwo, binding.rbArabicFontTwo.isChecked).apply()
                 editor.putBoolean(ArabicFontThree, binding.rbArabicFontThree.isChecked).apply()
             }
-
             R.id.rgFontTranslation -> {
                 editor.putBoolean(TranslationFontOne, binding.rbTranslationFontOne.isChecked).apply()
                 editor.putBoolean(TranslationFontTwo, binding.rbTranslationFontTwo.isChecked).apply()
                 editor.putBoolean(TranslationFontThree, binding.rbTranslationFontThree.isChecked).apply()
+            }
+            R.id.rgTextAlignment -> {
+                editor.putBoolean(AlignmentLeft, binding.rbAlignmentLeft.isChecked).apply()
+                editor.putBoolean(AlignmentCenter, binding.rbAlignmentCenter.isChecked).apply()
+                editor.putBoolean(AlignmentRight, binding.rbAlignmentRight.isChecked).apply()
             }
         }
     }
@@ -144,7 +160,6 @@ class ToolsBottomSheet : BottomSheetDialogFragment(), SeekBar.OnSeekBarChangeLis
                     }
                 }
             }
-
             R.id.swShowTranslation -> {
                 editor.putBoolean(SwitchTranslationShow, isChecked).apply()
                 if (!isChecked) {
@@ -153,7 +168,6 @@ class ToolsBottomSheet : BottomSheetDialogFragment(), SeekBar.OnSeekBarChangeLis
                     }
                 }
             }
-
             R.id.swShowShareButton -> {
                 editor.putBoolean(SwitchShareButtonShow, isChecked).apply()
             }
