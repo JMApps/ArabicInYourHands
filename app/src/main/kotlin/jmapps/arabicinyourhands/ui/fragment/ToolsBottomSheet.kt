@@ -18,7 +18,8 @@ import jmapps.arabicinyourhands.databinding.BottomSheetToolsBinding
 class ToolsBottomSheet : BottomSheetDialogFragment(), SeekBar.OnSeekBarChangeListener,
     RadioGroup.OnCheckedChangeListener, CompoundButton.OnCheckedChangeListener {
 
-    override fun getTheme(): Int = R.style.BottomSheetStyle
+    override fun getTheme() = R.style.BottomSheetStyleFMain
+
     private lateinit var binding: BottomSheetToolsBinding
 
     private lateinit var preferences: SharedPreferences

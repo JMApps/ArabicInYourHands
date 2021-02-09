@@ -20,7 +20,7 @@ import jmapps.arabicinyourhands.ui.model.SubChapterModel
 class FirstSubChapterBottomSheet : BottomSheetDialogFragment(),
     SubChapterAdapter.OnSubChapterItemClick {
 
-    override fun getTheme() = R.style.BottomSheetStyle
+    override fun getTheme() = R.style.BottomSheetStyleFMain
 
     private var sectionNumber: Int? = null
 

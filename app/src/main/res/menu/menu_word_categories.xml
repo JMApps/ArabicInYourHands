@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_search_categories"
+        android:icon="@drawable/ic_search"
+        android:orderInCategory="10"
+        android:title="@string/action_search_by_categories"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        app:showAsAction="ifRoom|collapseActionView" />
+
+    <item
+        android:id="@+id/action_add_word_categories"
+        android:icon="@drawable/ic_add"
+        android:orderInCategory="20"
+        android:title="@string/action_add_category"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_tools_word_categories"
+        android:icon="@drawable/ic_settings"
+        android:orderInCategory="30"
+        android:title="@string/action_settings"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_order_categories"
+        android:icon="@drawable/ic_sort"
+        android:orderInCategory="40"
+        android:title="@string/order_categories"
+        app:showAsAction="ifRoom">
+        <menu>
+            <item
+                android:id="@+id/item_order_by_add_time"
+                android:icon="@drawable/ic_by_add_time"
+                android:orderInCategory="10"
+                android:title="@string/order_by_add_time" />
+            <item
+                android:id="@+id/item_order_by_change_time"
+                android:icon="@drawable/ic_by_change_time"
+                android:orderInCategory="20"
+                android:title="@string/order_by_change_time" />
+            <item
+                android:id="@+id/item_order_by_color"
+                android:icon="@drawable/ic_by_color"
+                android:orderInCategory="30"
+                android:title="@string/order_by_color" />
+            <item
+                android:id="@+id/item_order_by_alphabet"
+                android:icon="@drawable/ic_by_alphabet"
+                android:orderInCategory="40"
+                android:title="@string/order_by_alphabet" />
+            <item
+                android:id="@+id/item_order_by_priority"
+                android:icon="@drawable/ic_by_priority"
+                android:orderInCategory="50"
+                android:title="@string/order_by_priority" />
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/action_delete_all_categories"
+        android:orderInCategory="50"
+        android:title="@string/action_delete_all_categories"
+        app:showAsAction="never" />
+</menu>

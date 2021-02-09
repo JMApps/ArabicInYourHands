@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <com.wajahatkarim3.easyflipview.EasyFlipView
+        android:id="@+id/flViewWords"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:autoFlipBack="true"
+        app:autoFlipBackTime="1500"
+        app:flipDuration="500"
+        app:flipEnabled="true"
+        app:flipFrom="front"
+        app:flipOnTouch="false"
+        app:flipType="horizontal">
+
+        <include
+            android:id="@+id/flip_container_back"
+            layout="@layout/fragment_flip_word_back" />
+
+        <include
+            android:id="@+id/flip_container_front"
+            layout="@layout/fragment_flip_word_front" />
+    </com.wajahatkarim3.easyflipview.EasyFlipView>
+</layout>

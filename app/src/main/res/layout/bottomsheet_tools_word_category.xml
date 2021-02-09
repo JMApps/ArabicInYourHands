@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_view_settings_word_category_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:drawableStart="@drawable/ic_settings"
+            android:drawablePadding="@dimen/main_padding"
+            android:gravity="center_vertical"
+            android:padding="@dimen/main_padding"
+            android:text="@string/action_settings"
+            android:textColor="@color/white"
+            android:textSize="@dimen/main_app_text_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_view_date_show_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/main_margin"
+            android:layout_marginTop="@dimen/main_margin"
+            android:layout_marginEnd="@dimen/main_margin"
+            android:drawableStart="@drawable/ic_tools_visibility"
+            android:drawablePadding="@dimen/main_padding"
+            android:text="@string/action_showing_dates"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/main_app_text_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_view_settings_word_category_description" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switch_add_word_category_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/main_margin"
+            android:layout_marginTop="@dimen/main_margin_mini"
+            android:layout_marginEnd="@dimen/main_margin"
+            android:drawableStart="@drawable/ic_by_add_time"
+            android:drawablePadding="@dimen/main_padding"
+            android:text="@string/action_add_date_time"
+            android:textColor="@color/main"
+            android:textSize="@dimen/main_app_text_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_view_date_show_description" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switch_change_word_category_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/main_margin"
+            android:layout_marginTop="@dimen/main_margin_mini"
+            android:layout_marginEnd="@dimen/main_margin"
+            android:layout_marginBottom="@dimen/main_margin_big"
+            android:drawableStart="@drawable/ic_by_change_time"
+            android:drawablePadding="@dimen/main_padding"
+            android:text="@string/action_change_date_time"
+            android:textColor="@color/main"
+            android:textSize="@dimen/main_app_text_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/switch_add_word_category_time" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

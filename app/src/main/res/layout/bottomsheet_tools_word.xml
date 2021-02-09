@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_view_settings_word_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:drawablePadding="@dimen/main_padding"
+            android:padding="@dimen/main_padding"
+            android:text="@string/action_settings"
+            android:textColor="@color/white"
+            android:textSize="@dimen/main_app_text_size"
+            app:drawableStartCompat="@drawable/ic_settings"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_view_grid_count_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/main_margin"
+            android:layout_marginTop="@dimen/main_margin"
+            android:drawableStart="@drawable/ic_tools_columns"
+            android:drawablePadding="@dimen/main_padding"
+            android:text="@string/action_grid_count"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/main_app_text_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_view_settings_word_description" />
+
+        <androidx.appcompat.widget.AppCompatSeekBar
+            android:id="@+id/seek_bar_word_grin_count"
+            style="@style/Widget.AppCompat.SeekBar.Discrete"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/main_margin"
+            android:layout_marginTop="@dimen/main_margin_mini"
+            android:layout_marginEnd="@dimen/main_margin_mini"
+            android:max="4"
+            app:layout_constraintEnd_toStartOf="@+id/text_grid_count"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_view_grid_count_description" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_grid_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/main_margin"
+            android:minWidth="@dimen/item_count_min_width"
+            android:textColor="@color/color_tools_count"
+            android:textSize="@dimen/main_app_text_size"
+            app:layout_constraintBottom_toBottomOf="@+id/seek_bar_word_grin_count"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/seek_bar_word_grin_count" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_view_word_text_size_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/main_margin"
+            android:layout_marginTop="@dimen/main_margin"
+            android:drawableStart="@drawable/ic_tools_text_size"
+            android:drawablePadding="@dimen/main_padding"
+            android:text="@string/description_text_size"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/main_app_text_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/seek_bar_word_grin_count" />
+
+        <androidx.appcompat.widget.AppCompatSeekBar
+            android:id="@+id/seek_bar_word_text_size"
+            style="@style/Widget.AppCompat.SeekBar.Discrete"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/main_margin"
+            android:layout_marginTop="@dimen/main_margin_mini"
+            android:layout_marginEnd="@dimen/main_margin_mini"
+            android:max="9"
+            app:layout_constraintEnd_toStartOf="@+id/text_text_size_count"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_view_word_text_size_description" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_text_size_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/main_margin"
+            android:minWidth="@dimen/item_count_min_width"
+            android:textColor="@color/color_tools_count"
+            android:textSize="@dimen/main_app_text_size"
+            app:layout_constraintBottom_toBottomOf="@+id/seek_bar_word_text_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/seek_bar_word_text_size" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_view_word_text_align_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/main_margin"
+            android:layout_marginTop="@dimen/main_margin"
+            android:drawableStart="@drawable/ic_tools_align"
+            android:drawablePadding="@dimen/main_padding"
+            android:text="@string/action_align_text"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/main_app_text_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/seek_bar_word_text_size" />
+
+        <RadioGroup
+            android:id="@+id/radio_group_align_word_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/main_margin"
+            android:layout_marginTop="@dimen/main_margin_mini"
+            android:layout_marginEnd="@dimen/main_margin"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_view_word_text_align_description">
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/radio_button_align_text_left"
+                android:layout_width="@dimen/tools_icon_size"
+                android:layout_height="@dimen/tools_icon_size"
+                android:layout_marginEnd="@dimen/main_margin_big"
+                android:button="@drawable/ic_align_to_left" />
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/radio_button_align_text_center"
+                android:layout_width="@dimen/tools_icon_size"
+                android:layout_height="@dimen/tools_icon_size"
+                android:layout_marginStart="@dimen/main_margin_big"
+                android:layout_marginEnd="@dimen/main_margin_big"
+                android:button="@drawable/ic_align_to_center" />
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/radio_button_align_text_right"
+                android:layout_width="@dimen/tools_icon_size"
+                android:layout_height="@dimen/tools_icon_size"
+                android:layout_marginStart="@dimen/main_margin_big"
+                android:button="@drawable/ic_align_to_right" />
+        </RadioGroup>
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switch_show_word"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/main_margin"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="@dimen/main_margin"
+            android:drawableStart="@drawable/ic_word_simple"
+            android:drawablePadding="@dimen/main_padding"
+            android:text="@string/action_show_word"
+            android:textColor="@color/main"
+            android:textSize="@dimen/main_app_text_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radio_group_align_word_text" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switch_show_word_transcription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/main_margin"
+            android:layout_marginTop="@dimen/main_margin_mini"
+            android:layout_marginEnd="@dimen/main_margin"
+            android:drawableStart="@drawable/ic_word_transcription"
+            android:drawablePadding="@dimen/main_padding"
+            android:text="@string/action_show_word_transcription"
+            android:textColor="@color/main"
+            android:textSize="@dimen/main_app_text_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/switch_show_word" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switch_show_word_translate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/main_margin"
+            android:layout_marginTop="@dimen/main_margin_mini"
+            android:layout_marginEnd="@dimen/main_margin"
+            android:layout_marginBottom="@dimen/main_margin"
+            android:drawableStart="@drawable/ic_word_translate"
+            android:drawablePadding="@dimen/main_padding"
+            android:text="@string/action_show_word_translate"
+            android:textColor="@color/main"
+            android:textSize="@dimen/main_app_text_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/switch_show_word_transcription" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

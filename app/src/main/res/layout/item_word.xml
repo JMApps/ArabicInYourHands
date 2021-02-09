@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/items_card_margin"
+    app:cardBackgroundColor="@color/cardViewBackground"
+    app:cardCornerRadius="@dimen/color_card_radius"
+    app:cardElevation="@dimen/item_card_elevation">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?android:selectableItemBackgroundBorderless"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_word_color"
+            android:layout_width="@dimen/priority_icon_size"
+            android:layout_height="match_parent"
+            tools:background="@color/green_300" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/main_padding_mini">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_word"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_word"
+                tools:text="word" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_word_transcription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_word_transcription"
+                tools:text="ворд" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_word_translate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_word_translate"
+                tools:text="слово" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.cardview.widget.CardView>

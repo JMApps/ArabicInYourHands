@@ -5,9 +5,9 @@
     style="@style/CardViewStyle"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="3dp"
+    android:layout_margin="@dimen/items_card_margin"
     app:cardCornerRadius="@dimen/main_item_card_radius"
-    app:cardElevation="3dp">
+    app:cardElevation="@dimen/item_card_elevation">
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/llContentItem"
@@ -22,7 +22,7 @@
             android:id="@+id/tvChapterId"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/main_margin"
+            android:layout_marginEnd="16dp"
             android:gravity="center"
             android:minWidth="30dp"
             android:textSize="@dimen/main_app_text_size"
@@ -33,7 +33,7 @@
             android:id="@+id/ivChapterIcon"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:layout_marginEnd="@dimen/main_margin"
+            android:layout_marginEnd="16dp"
             android:contentDescription="@null"
             toolst:src="@drawable/ic_launch" />
 

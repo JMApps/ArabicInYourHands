@@ -11,9 +11,27 @@
     <color name="color_seek_bar">#29B6F6</color>
     <color name="color_switch">#039BE5</color>
     <color name="color_icon_tool">#039BE5</color>
-    <color name="color_title">#4CAF50</color>
+    <color name="color_title">#2E7D32</color>
     <color name="color_names">#29B6F6</color>
     <color name="color_content_ar">#4CAF50</color>
     <color name="color_content_ru">#ECECEC</color>
     <color name="color_main_icon">#039BE5</color>
+
+    <color name="color_warning">#EF5350</color>
+    <color name="color_item_icon_active">#2E7D32</color>
+    <color name="color_item_icon_passive">#FFA000</color>
+    <color name="color_edit_text_active_hint_line">#26A69A</color>
+    <color name="color_edit_text_not_active_hint_line">#2E7D32</color>
+    <color name="color_add_button">#4CAF50</color>
+    <color name="color_add_button_ripple">#4CAF50</color>
+    <color name="color_choose_color_ripple">#C8C8C8</color>
+    <color name="color_scroll_progress_line">#9D9D9D</color>
+    <color name="color_tools_count">#26A69A</color>
+    <color name="color_priority_circular">#26A69A</color>
+    <color name="color_word">#2E7D32</color>
+    <color name="color_word_transcription">#26A69A</color>
+    <color name="color_word_translate">#C0C0C0</color>
+    <color name="color_dot">#42A5F5</color>
+    <color name="color_dot_selected">#2E7D32</color>
+    <color name="color_category_id">#2E7D32</color>
 </resources>

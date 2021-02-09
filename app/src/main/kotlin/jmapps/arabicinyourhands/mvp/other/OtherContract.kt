@@ -5,7 +5,7 @@ import androidx.fragment.app.Fragment
 interface OtherContract {
 
     interface OtherView {
-        fun replaceFragment(fragment: Fragment)
+        fun replaceFragment(fragment: Fragment, title: String)
 
         fun getTools()
 
@@ -17,7 +17,7 @@ interface OtherContract {
     }
 
     interface OtherPresenter {
-        fun replaceFragment(fragment: Fragment)
+        fun replaceFragment(fragment: Fragment, title: String)
 
         fun setTools()
 

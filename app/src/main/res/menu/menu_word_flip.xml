@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_change_flip_mode"
+        android:checkable="true"
+        android:icon="@drawable/ic_change_language"
+        android:orderInCategory="10"
+        android:title="@string/action_change_mode"
+        app:showAsAction="always" />
+</menu>

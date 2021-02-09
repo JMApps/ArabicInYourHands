@@ -35,6 +35,14 @@
             android:name=".ui.activities.SecondContentActivity"
             android:label="@string/title_activity_second_content"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.activities.AddWordActivity"
+            android:label="@string/add_word"
+            android:theme="@style/AppTheme.NoActionBar" />
+        ]<activity
+            android:name=".ui.activities.FlipModeActivity"
+            android:label="@string/flip_mode"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

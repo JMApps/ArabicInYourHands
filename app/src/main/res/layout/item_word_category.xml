@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/items_card_margin"
+    android:elevation="@dimen/item_card_elevation"
+    android:minHeight="@dimen/item_card_min_height"
+    app:cardBackgroundColor="@color/cardViewBackground"
+    app:cardCornerRadius="@dimen/item_small_card_corner">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/layout_word_category_item_priority"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?selectableItemBackgroundBorderless"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/item_card_min_height"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="start|center_vertical"
+                android:orientation="vertical"
+                android:padding="@dimen/main_padding">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/text_word_category_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start|center_vertical"
+                    android:textColor="@color/main"
+                    android:textSize="@dimen/main_app_text_size"
+                    android:textStyle="bold"
+                    tools:text="Слова на сегодня" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/main_margin_mini"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/text_view_word_category_item_add_date_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/main_margin_mini"
+                        android:gravity="start"
+                        android:textColor="@color/grey"
+                        android:textSize="@dimen/small_text_size" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/text_view_word_category_item_change_date_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:textColor="@color/grey"
+                        android:textSize="@dimen/small_text_size" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_word_category_color"
+                android:layout_width="@dimen/main_padding_big"
+                android:layout_height="match_parent"
+                android:background="@drawable/symmetry_left_circular_color_view"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/main_app_text_size"
+                app:fontFamily="@font/gilroy_medium" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.cardview.widget.CardView>

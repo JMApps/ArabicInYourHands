@@ -42,4 +42,103 @@
     <string name="action_volume_one">Том 1</string>
     <string name="action_volume_two">Том 2</string>
     <string name="action_volume_three">Том 3</string>
+    <string name="action_dictionary">Словарь</string>
+
+    <string name="add_word">Добавить слово</string>
+    <string name="flip_mode">Режим карточек</string>
+    <string name="action_change_mode">Изменить режим</string>
+
+    <!--    Main container description's-->
+    <string name="description_add_dictionary_first_category">Добавьте первую категорию</string>
+
+    <!--   Word categories-->
+    <string name="action_search_by_categories">Поиск категорий</string>
+    <string name="description_add_category">Добавить категорию</string>
+    <string name="hint_enter_category_name">Введите название категории</string>
+    <string name="description_choose_color">Выберите цвет</string>
+    <string name="action_add_category">Добавить</string>
+    <string name="max_word_category_name_characters">%1$d/100</string>
+    <string name="toast_achieved_max_word_category_name_characters">Достигнуто макс. число 100</string>
+    <string name="toast_category_added">Категория добавлена</string>
+    <string name="description_change_category">Изменить категорию</string>
+    <string name="hint_enter_new_category_name">Введите новое название категории</string>
+    <string name="action_change_category">Изменить</string>
+    <string name="toast_category_changed">Категория изменена</string>
+    <string name="action_delete_all_categories">Удалить все категории</string>
+    <string name="action_category_deleted">Категория удалена</string>
+    <string name="action_categories_deleted">Категории удалены</string>
+
+    <!--    Word item's-->
+    <string name="action_search_by_word">Поиск слов</string>
+    <string name="description_add_first_word">Добавьте первое слово в категорию:\n%1$s</string>
+    <string name="action_add_word">Добавить слово</string>
+    <string name="action_change_word">Изменить слово</string>
+    <string name="hint_enter_word">Введие слово…</string>
+    <string name="hint_enter_word_transcription">Введите транскрипцию…</string>
+    <string name="hint_enter_word_translate">Введите перевод…</string>
+    <string name="hint_enter_new_word">Введите новое слово…</string>
+    <string name="hint_enter_word_new_transcription">Введите новое слово транскрипцию…</string>
+    <string name="hint_enter_word_new_translate">Введите новое слово перевод…</string>
+    <string name="action_change_word_category">Изменить категорию</string>
+    <string name="action_add_more_word">Добавить ещё</string>
+    <string name="action_add_word_and_close">Добавить и закрыть</string>
+    <string name="toast_word_added">Слово добавлено</string>
+    <string name="description_change_word">Изменить слово</string>
+    <string name="toast_word_changed">Слово изменено</string>
+    <string name="action_delete_all_words">Удалить все слова категории</string>
+    <string name="action_word_deleted">Слово удалено</string>
+    <string name="action_words_deleted">Слова удалены</string>
+    <string name="description_not_added_words">Нет добавленных слов</string>
+
+    <!--    Popup-->
+    <string name="popup_change">Изменить</string>
+    <string name="popup_share">Поделиться</string>
+    <string name="popup_delete">Удалить</string>
+    <string name="toast_deleted">Удалено</string>
+    <string name="toast_canceled">Отменено</string>
+
+    <!--    Order by-->
+    <string name="order_categories">Сортировать категории:</string>
+    <string name="order_notes">Сортировать заметки:</string>
+    <string name="order_by_add_time">По дате добавления</string>
+    <string name="order_by_change_time">По дате изменения</string>
+    <string name="order_by_executions">По дате выполнения</string>
+    <string name="order_by_color">По цвету</string>
+    <string name="order_by_alphabet">По алфавиту</string>
+    <string name="order_by_priority">По приоритету</string>
+
+    <!--    Alert dialogs-->
+    <string name="dialog_message_are_sure_you_want_word_categories">Вы уверены что хотите удалить все категории словаря вместе с их содержимым?</string>
+    <string name="dialog_message_are_sure_you_want_word_category">Вы уверены что хотите удалить категорию %1$s вместе с её содержимым?</string>
+    <string name="dialog_message_are_sure_you_want_items_word">Вы уверены что хотите удалить все слова из категории: %1$s?</string>
+    <string name="dialog_message_are_sure_you_want_item_word">Вы уверены что хотите удалить слово?</string>
+    <string name="toast_list_cleared">Список полностью очищен</string>
+
+    <string name="action_warning">Подтверждение</string>
+    <string name="alert_ok">Да</string>
+    <string name="alert_save">Сохранить</string>
+    <string name="alert_delete">Удалить</string>
+    <string name="alert_apply">Применить</string>
+    <string name="alert_not_apply">Не применять</string>
+    <string name="alert_cancel">Отмена</string>
+
+    <!--    Settings-->
+    <string name="action_settings">Настройки</string>
+    <string name="description_text_size">Размер текста:</string>
+    <string name="action_showing_dates">Отображать:</string>
+    <string name="action_add_date_time">Дата добавления</string>
+    <string name="action_change_date_time">Дата изменения</string>
+    <string name="action_execution_date_time">Дата выполнения</string>
+    <string name="action_priority">Приоритет</string>
+    <string name="action_add_time_item_word">Добавлено: %1$s</string>
+    <string name="action_change_time_item_word">Изменено: %1$s</string>
+    <string name="action_execution_time_item_task">Выполнено: %1$s</string>
+    <string name="action_change">Изменить</string>
+    <string name="action_ready">Готово</string>
+    <string name="action_grid_count">Количество столбцов</string>
+    <string name="action_align_text">Расположение текста</string>
+    <string name="action_show_word">Отображать слово</string>
+    <string name="action_show_word_transcription">Отображать транскрипцию</string>
+    <string name="action_show_word_translate">Отображать перевод</string>
+    <string name="order_words">Сортировать слова</string>
 </resources>

@@ -11,7 +11,8 @@ import jmapps.arabicinyourhands.databinding.BottomSheetAboutUsBinding
 
 class AboutUsBottomSheet : BottomSheetDialogFragment() {
 
-    override fun getTheme(): Int = R.style.BottomSheetStyle
+    override fun getTheme() = R.style.BottomSheetStyleFMain
+
     private lateinit var binding: BottomSheetAboutUsBinding
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {

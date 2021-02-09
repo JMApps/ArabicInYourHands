@@ -4,10 +4,10 @@
     style="@style/CardViewStyle"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="6dp"
+    android:layout_margin="@dimen/items_card_margin"
     android:minHeight="100dp"
     app:cardCornerRadius="@dimen/main_item_card_radius"
-    app:cardElevation="3dp">
+    app:cardElevation="@dimen/item_card_elevation">
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/llContentItem"

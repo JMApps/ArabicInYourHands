@@ -13,8 +13,8 @@ class OtherPresenterImpl(private val context: Context?, private val otherView: O
     private val linkOtherApp = "https://telegra.ph/JM-Applications-03-11"
     private val linkApp = "https://play.google.com/store/apps/details?id=jmapps.arabicinyourhands"
 
-    override fun replaceFragment(fragment: Fragment) {
-        otherView?.replaceFragment(fragment)
+    override fun replaceFragment(fragment: Fragment, title: String) {
+        otherView?.replaceFragment(fragment, title)
     }
 
     override fun setTools() {

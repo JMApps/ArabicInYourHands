@@ -13,13 +13,21 @@
         <item name="android:windowBackground">@color/mainBackground</item>
         <item name="android:fontFamily">@font/gilroy_medium</item>
     </style>
+    <!--    Bottom Sheet dialog styles-->
+    <style name="BottomSheetStyleFull" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/BottomSheetStyle</item>
+        <item name="colorAccent">@color/color_tools_count</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:colorBackground">@color/mainBackground</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+    </style>
 
-    <style name="BottomSheetStyle" parent="Theme.Design.Light.BottomSheetDialog">
-        <item name="bottomSheetStyle">@style/BottomSheetStyleBehavior</item>
+    <style name="BottomSheetStyleFMain" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/BottomSheetStyle</item>
         <item name="android:colorBackground">@color/mainBackground</item>
     </style>
 
-    <style name="BottomSheetStyleBehavior" parent="Widget.Design.BottomSheet.Modal">
+    <style name="BottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
         <item name="behavior_peekHeight">1000dp</item>
     </style>
 

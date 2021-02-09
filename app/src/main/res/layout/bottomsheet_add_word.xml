@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_view_add_word_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:drawableStart="@drawable/ic_main_dictionary_solid"
+            android:drawablePadding="@dimen/main_padding"
+            android:padding="@dimen/main_padding"
+            android:text="@string/add_word"
+            android:textColor="@color/white"
+            android:textSize="@dimen/main_app_text_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edit_add_word"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/main_margin_mini"
+            android:layout_marginEnd="@dimen/main_margin_mini"
+            android:background="@drawable/edging_input_edit_text_stroke_corner_line"
+            android:ellipsize="end"
+            android:hint="@string/hint_enter_word"
+            android:inputType="textCapSentences"
+            android:maxLength="100"
+            android:padding="@dimen/main_padding"
+            android:singleLine="true"
+            android:textColor="@color/color_word"
+            android:textColorHint="@color/grey"
+            android:textSize="@dimen/main_app_text_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_view_add_word_description">
+
+            <requestFocus />
+        </androidx.appcompat.widget.AppCompatEditText>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edit_add_word_transcription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/main_margin_mini"
+            android:layout_marginEnd="@dimen/main_margin_mini"
+            android:background="@drawable/edging_input_edit_text_stroke_corner_line"
+            android:ellipsize="end"
+            android:hint="@string/hint_enter_word_transcription"
+            android:inputType="textCapSentences"
+            android:maxLength="100"
+            android:padding="@dimen/main_padding"
+            android:singleLine="true"
+            android:textColor="@color/color_word_transcription"
+            android:textColorHint="@color/grey"
+            android:textSize="@dimen/main_app_text_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_add_word" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edit_add_word_translate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/main_margin_mini"
+            android:layout_marginEnd="@dimen/main_margin_mini"
+            android:background="@drawable/edging_input_edit_text_stroke_corner_line"
+            android:ellipsize="end"
+            android:hint="@string/hint_enter_word_translate"
+            android:inputType="textCapSentences"
+            android:maxLength="100"
+            android:padding="@dimen/main_padding"
+            android:singleLine="true"
+            android:textColor="@color/color_word_translate"
+            android:textColorHint="@color/grey"
+            android:textSize="@dimen/main_app_text_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_add_word_transcription" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_add_more_words"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/main_margin_mini"
+            android:layout_marginTop="@dimen/main_margin_mini"
+            android:background="@drawable/main_button_ripple"
+            android:text="@string/action_add_more_word"
+            android:textColor="@color/white"
+            android:textSize="@dimen/main_app_text_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_add_word_translate" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_add_word_and_close"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/main_margin_mini"
+            android:layout_marginTop="@dimen/main_margin_mini"
+            android:layout_marginBottom="@dimen/main_margin_mini"
+            android:background="@drawable/main_button_ripple"
+            android:text="@string/action_add_word_and_close"
+            android:textColor="@color/white"
+            android:textSize="@dimen/main_app_text_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_add_more_words" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

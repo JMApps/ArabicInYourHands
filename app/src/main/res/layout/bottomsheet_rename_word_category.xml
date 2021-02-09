@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_view_rename_word_category_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:drawableStart="@drawable/ic_rename"
+            android:drawablePadding="@dimen/main_padding"
+            android:gravity="center_vertical"
+            android:padding="@dimen/main_padding"
+            android:text="@string/description_change_category"
+            android:textColor="@color/white"
+            android:textSize="@dimen/main_app_text_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edit_rename_word_category"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/main_margin_mini"
+            android:layout_marginEnd="@dimen/main_margin_mini"
+            android:background="@drawable/edging_input_edit_text_stroke_corner_line"
+            android:ellipsize="end"
+            android:hint="@string/hint_enter_new_category_name"
+            android:inputType="textCapSentences"
+            android:maxLength="100"
+            android:padding="@dimen/main_padding"
+            android:singleLine="true"
+            android:textColor="@color/main"
+            android:textColorHint="@color/grey"
+            android:textSize="@dimen/main_app_text_size"
+            app:layout_constraintEnd_toStartOf="@+id/text_new_word_category_color"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_view_rename_word_category_description">
+
+            <requestFocus />
+        </androidx.appcompat.widget.AppCompatEditText>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_new_word_category_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/symmetry_left_circular_color_view"
+            android:gravity="center"
+            android:padding="@dimen/main_padding"
+            app:drawableEndCompat="@drawable/ic_palette"
+            app:layout_constraintBottom_toBottomOf="@+id/edit_rename_word_category"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/edit_rename_word_category" />
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/spinner_word_priority"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/main_margin_mini"
+            android:layout_marginTop="@dimen/main_margin"
+            android:layout_marginEnd="@dimen/main_margin_mini"
+            android:background="@drawable/priority_stroke_circular_color_view"
+            android:entries="@array/priorities"
+            android:padding="@dimen/main_padding_mini"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_rename_word_category" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_length_change_word_category_characters"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/main_margin_mini"
+            android:gravity="center"
+            android:minWidth="@dimen/characters_min_width"
+            android:textColor="@color/color_tools_count"
+            app:layout_constraintBottom_toBottomOf="@+id/button_rename_word_category"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/button_rename_word_category" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_rename_word_category"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/main_margin_mini"
+            android:layout_marginTop="@dimen/main_margin_mini"
+            android:layout_marginBottom="@dimen/main_margin_mini"
+            android:background="@drawable/main_button_ripple"
+            android:text="@string/action_change_category"
+            android:textColor="@color/white"
+            android:textSize="@dimen/main_app_text_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/text_length_change_word_category_characters"
+            app:layout_constraintTop_toBottomOf="@+id/spinner_word_priority" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

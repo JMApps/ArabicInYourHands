@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linear_word_flip"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/main_margin_big"
+            app:cardBackgroundColor="@color/cardViewBackground"
+            app:cardCornerRadius="@dimen/item_big_card_corner"
+            app:cardElevation="@dimen/item_card_elevation">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="@dimen/main_padding">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/text_flip_word_transcription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/main_padding_mini"
+                    android:paddingBottom="@dimen/main_padding_mini"
+                    android:textColor="@color/color_word_transcription"
+                    android:textSize="50sp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/text_flip_word_translate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/main_padding_mini"
+                    android:paddingBottom="@dimen/main_padding"
+                    android:textColor="@color/color_word_translate"
+                    android:textSize="50sp" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.cardview.widget.CardView>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

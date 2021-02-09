@@ -9,6 +9,7 @@ import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
+import androidx.appcompat.widget.SwitchCompat
 import androidx.core.view.GravityCompat
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
@@ -53,7 +54,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         isNightMode(valNightMode)
 
         otherPresenterImpl = OtherPresenterImpl(this, this)
-        otherPresenterImpl.replaceFragment(FirstChapterFragment())
+        otherPresenterImpl.replaceFragment(FirstChapterFragment(), getString(R.string.app_name))
 
         val toggle = ActionBarDrawerToggle(
             this,
@@ -98,20 +99,23 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
             R.id.nav_share -> otherPresenterImpl.shareLink()
 
-            R.id.bottom_nav_first_volume -> otherPresenterImpl.replaceFragment(FirstChapterFragment())
+            R.id.bottom_nav_first_volume -> otherPresenterImpl.replaceFragment(FirstChapterFragment(), getString(R.string.action_volume_one))
 
-            R.id.bottom_nav_second_volume -> otherPresenterImpl.replaceFragment(SecondChapterFragment())
+            R.id.bottom_nav_second_volume -> otherPresenterImpl.replaceFragment(SecondChapterFragment(), getString(R.string.action_volume_two))
 
-            R.id.bottom_nav_third_volume -> otherPresenterImpl.replaceFragment(ThirdChapterFragment())
+            R.id.bottom_nav_third_volume -> otherPresenterImpl.replaceFragment(ThirdChapterFragment(), getString(R.string.action_volume_three))
+
+            R.id.bottom_nav_dictionary -> otherPresenterImpl.replaceFragment(DictionaryFragment(), getString(R.string.action_dictionary))
         }
         binding.drawerLayout.closeDrawer(GravityCompat.START)
         return true
     }
 
-    override fun replaceFragment(fragment: Fragment) {
+    override fun replaceFragment(fragment: Fragment, title: String) {
         fragmentTransaction = supportFragmentManager.beginTransaction()
         fragmentTransaction.replace(R.id.fragmentContainerMain, fragment)
         fragmentTransaction.commit()
+        supportActionBar?.title = title
     }
 
     override fun getTools() {

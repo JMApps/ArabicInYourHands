@@ -20,4 +20,22 @@
     <color name="color_content_ar">#BA68C8</color>
     <color name="color_content_ru">#212121</color>
     <color name="color_main_icon">#FF7043</color>
+
+    <color name="color_warning">#EF5350</color>
+    <color name="color_item_icon_active">#BA68C8</color>
+    <color name="color_item_icon_passive">#FFA000</color>
+    <color name="color_edit_text_active_hint_line">#26A69A</color>
+    <color name="color_edit_text_not_active_hint_line">#BA68C8</color>
+    <color name="color_add_button">#C872D7</color>
+    <color name="color_add_button_ripple">#9241A0</color>
+    <color name="color_choose_color_ripple">#7B7B7B</color>
+    <color name="color_scroll_progress_line">#7B7B7B</color>
+    <color name="color_tools_count">#26A69A</color>
+    <color name="color_priority_circular">#26A69A</color>
+    <color name="color_word">#BA68C8</color>
+    <color name="color_word_transcription">#26A69A</color>
+    <color name="color_word_translate">#7B7B7B</color>
+    <color name="color_dot">#42A5F5</color>
+    <color name="color_dot_selected">#BA68C8</color>
+    <color name="color_category_id">#BA68C8</color>
 </resources>

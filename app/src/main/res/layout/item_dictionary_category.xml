@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/items_card_margin"
+    android:elevation="@dimen/item_card_elevation"
+    android:minHeight="@dimen/item_card_min_height"
+    app:cardBackgroundColor="@color/cardViewBackground"
+    app:cardCornerRadius="@dimen/item_small_card_corner">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?selectableItemBackgroundBorderless"
+        android:gravity="center_vertical"
+        android:minHeight="@dimen/item_card_min_height"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_current_category_color"
+            android:layout_width="@dimen/main_padding_big"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/main_margin_mini"
+            android:gravity="center"
+            android:minWidth="@dimen/main_padding_big"
+            android:minHeight="@dimen/item_card_min_height"
+            android:textColor="@color/white"
+            android:textSize="@dimen/main_app_text_size" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_title_dictionary_category"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/main_margin_mini"
+            android:layout_weight="1"
+            android:padding="@dimen/main_padding_mini"
+            android:textColor="@color/main"
+            android:textSize="@dimen/main_app_text_size"
+            tools:text="На сегодня" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.cardview.widget.CardView>
