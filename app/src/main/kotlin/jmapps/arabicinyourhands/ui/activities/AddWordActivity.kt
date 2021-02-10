@@ -9,6 +9,7 @@ import android.text.TextUtils
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
 import androidx.databinding.DataBindingUtil
@@ -92,6 +93,8 @@ class AddWordActivity : AppCompatActivity(), DeleteAlertUtil.OnClickDelete, View
             .registerOnSharedPreferenceChangeListener(this)
         defaultOrderIndex = sharedLocalPreferences.getIntValue(KEY_ORDER_WORD_INDEX, 0)
         wordGridCount = sharedLocalPreferences.getIntValue(ARG_WORD_GRID_COUNT, 2)
+
+        Toast.makeText(this, "$defaultOrderIndex", Toast.LENGTH_SHORT).show()
 
         otherActivityPresenter = OtherActivityPresenter(this)
         otherActivityPresenter.initView(wordCategoryId!!, defaultOrderIndex!!)
@@ -184,7 +187,7 @@ class AddWordActivity : AppCompatActivity(), DeleteAlertUtil.OnClickDelete, View
     }
 
     override fun itemClickRenameItem(wordItemId: Long, word: String, wordTranscription: String, wordTranslate: String) {
-        val renameWordItem = RenameWordItemBottomSheet.toInstance(wordItemId, word, wordTranscription, wordTranslate, wordCategoryId!!, wordCategoryPosition!!)
+        val renameWordItem = RenameWordItemBottomSheet.toInstance(wordItemId, word, wordTranscription, wordTranslate, wordCategoryId!!, wordCategoryPosition!!, defaultOrderIndex!!)
         renameWordItem.show(supportFragmentManager, ARG_RENAME_WORD_ITEM_BS)
     }
 

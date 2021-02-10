@@ -30,6 +30,16 @@ class RenameWordItemBottomSheet : BottomSheetDialogFragment(), View.OnClickListe
     private var wordTranslate: String? = null
     private var categoryId: Long? = null
     private var categoryPosition: Int? = null
+    private var categoryOrderBy: Int? = null
+
+    private val listOrderCategories = listOf(
+        "addDateTime",
+        "changeDateTime",
+        "executionDateTime",
+        "color",
+        "alphabet",
+        "priority"
+    )
 
     companion object {
         const val ARG_RENAME_WORD_ITEM_BS = "arg_rename_word_item_bs"
@@ -39,6 +49,7 @@ class RenameWordItemBottomSheet : BottomSheetDialogFragment(), View.OnClickListe
         private const val ARG_RENAME_WORD_TRANSLATE = "arg_rename_word_translate"
         private const val ARG_RENAME_WORD_CATEGORY_ID = "arg_rename_word_category_id"
         private const val ARG_RENAME_WORD_CATEGORY_POSITION = "arg_rename_word_category_position"
+        private const val ARG_RENAME_WORD_CATEGORY_ORDER_BY = "arg_rename_word_category_order_by"
 
         @JvmStatic
         fun toInstance(
@@ -47,7 +58,8 @@ class RenameWordItemBottomSheet : BottomSheetDialogFragment(), View.OnClickListe
             wordTranscription: String,
             wordTranslate: String,
             categoryId: Long,
-            categoryPosition: Int): RenameWordItemBottomSheet {
+            categoryPosition: Int,
+            categoryOrderBy: Int): RenameWordItemBottomSheet {
             return RenameWordItemBottomSheet().apply {
                 arguments = Bundle().apply {
                     putLong(ARG_RENAME_WORD_ITEM_ID, wordItemId)
@@ -56,6 +68,7 @@ class RenameWordItemBottomSheet : BottomSheetDialogFragment(), View.OnClickListe
                     putString(ARG_RENAME_WORD_TRANSLATE, wordTranslate)
                     putLong(ARG_RENAME_WORD_CATEGORY_ID, categoryId)
                     putInt(ARG_RENAME_WORD_CATEGORY_POSITION, categoryPosition)
+                    putInt(ARG_RENAME_WORD_CATEGORY_ORDER_BY, categoryOrderBy)
                 }
             }
         }
@@ -72,6 +85,7 @@ class RenameWordItemBottomSheet : BottomSheetDialogFragment(), View.OnClickListe
         wordTranslate = arguments?.getString(ARG_RENAME_WORD_TRANSLATE)
         categoryId = arguments?.getLong(ARG_RENAME_WORD_CATEGORY_ID)
         categoryPosition = arguments?.getInt(ARG_RENAME_WORD_CATEGORY_POSITION)
+        categoryOrderBy = arguments?.getInt(ARG_RENAME_WORD_CATEGORY_ORDER_BY)
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
@@ -117,7 +131,7 @@ class RenameWordItemBottomSheet : BottomSheetDialogFragment(), View.OnClickListe
     }
 
     private fun initWordCategories() {
-        wordsCategoryViewModel.allWordCategories("AddDateTime").observe(viewLifecycleOwner, {
+        wordsCategoryViewModel.allWordCategories("addDateTime").observe(viewLifecycleOwner, {
             it.let {
                 changeWordCategoryAdapter = ChangeWordCategoryAdapter(requireContext(), it)
                 binding.spinnerChangeWordCategory.adapter = changeWordCategoryAdapter

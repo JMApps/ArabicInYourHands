@@ -62,7 +62,7 @@ class WordCategoriesAdapter(
 
         when (context.resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) {
             Configuration.UI_MODE_NIGHT_NO -> {
-                val priorityName = arrayListOf("#FFFFFF", "#FFF4CB", "#CBFFCF", "#FFCBD3")
+                val priorityName = arrayListOf("#FFFFFF", "#FFF4CB", "#CBFFCF", "#FFCBD")
                 holder.llWordCategoryItemPriority.setBackgroundColor(Color.parseColor(priorityName[current.priority.toInt()]))
             }
             Configuration.UI_MODE_NIGHT_YES -> {

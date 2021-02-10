@@ -6,7 +6,7 @@
             <corners
                 android:bottomLeftRadius="@dimen/item_small_card_corner"
                 android:topLeftRadius="@dimen/item_small_card_corner" />
-            <solid android:color="@color/red_300" />
+            <solid android:color="@color/pink_300" />
         </shape>
     </item>
 </ripple>

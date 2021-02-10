@@ -90,7 +90,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/edit_change_word_transcription" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/text_view_change_word_category_description"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -98,12 +98,13 @@
             android:layout_marginTop="@dimen/main_margin_mini"
             android:layout_marginEnd="@dimen/main_margin_mini"
             android:text="@string/action_change_word_category"
+            android:textColor="@color/main"
             android:textSize="@dimen/main_app_text_size"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/edit_change_word_translate" />
 
-        <Spinner
+        <androidx.appcompat.widget.AppCompatSpinner
             android:id="@+id/spinner_change_word_category"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

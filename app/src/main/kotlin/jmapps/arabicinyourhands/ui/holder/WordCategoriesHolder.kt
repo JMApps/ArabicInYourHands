@@ -16,7 +16,7 @@ import jmapps.arabicinyourhands.ui.preferences.SharedLocalProperties
 class WordCategoriesHolder(viewCategory: View) : RecyclerView.ViewHolder(viewCategory),
     SharedPreferences.OnSharedPreferenceChangeListener {
     private var preferences: SharedPreferences = PreferenceManager.getDefaultSharedPreferences(itemView.context)
-    private var sharedLocalPreferences: SharedLocalProperties
+    private var sharedLocalPreferences: SharedLocalProperties = SharedLocalProperties(preferences)
 
     val llWordCategoryItemPriority: LinearLayoutCompat = viewCategory.findViewById(R.id.layout_word_category_item_priority)
     val tvWordCategoryColor: TextView = viewCategory.findViewById(R.id.text_word_category_color)
@@ -25,7 +25,6 @@ class WordCategoriesHolder(viewCategory: View) : RecyclerView.ViewHolder(viewCat
     val tvWordCategoryChangeDateTime: TextView = viewCategory.findViewById(R.id.text_view_word_category_item_change_date_time)
 
     init {
-        sharedLocalPreferences = SharedLocalProperties(preferences)
         PreferenceManager.getDefaultSharedPreferences(itemView.context)
             .registerOnSharedPreferenceChangeListener(this)
         setShowAddChangeDateTime()

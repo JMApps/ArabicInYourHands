@@ -22,7 +22,7 @@ import jmapps.arabicinyourhands.ui.preferences.SharedLocalProperties
 class WordItemsHolder(wordView: View) : RecyclerView.ViewHolder(wordView),
     SharedPreferences.OnSharedPreferenceChangeListener {
     private var preferences: SharedPreferences = PreferenceManager.getDefaultSharedPreferences(itemView.context)
-    private var sharedLocalPreferences: SharedLocalProperties
+    private var sharedLocalPreferences: SharedLocalProperties = SharedLocalProperties(preferences)
 
     val tvWordColor: TextView = wordView.findViewById(R.id.text_word_color)
     val tvWord: TextView = wordView.findViewById(R.id.text_word)
@@ -30,7 +30,6 @@ class WordItemsHolder(wordView: View) : RecyclerView.ViewHolder(wordView),
     val tvWordTranslate: TextView = wordView.findViewById(R.id.text_word_translate)
 
     init {
-        sharedLocalPreferences = SharedLocalProperties(preferences)
         PreferenceManager.getDefaultSharedPreferences(itemView.context)
             .registerOnSharedPreferenceChangeListener(this)
         setTextSize()
