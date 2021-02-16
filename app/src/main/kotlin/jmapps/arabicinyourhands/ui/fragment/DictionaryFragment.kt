@@ -8,6 +8,7 @@ import android.os.Bundle
 import android.text.TextUtils
 import android.view.*
 import android.view.animation.AnimationUtils
+import android.widget.Toast
 import androidx.appcompat.widget.SearchView
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
@@ -20,6 +21,7 @@ import jmapps.arabicinyourhands.databinding.FragmentDictionaryCategoryBinding
 import jmapps.arabicinyourhands.mvp.otherDictionary.ContractInterface
 import jmapps.arabicinyourhands.mvp.otherDictionary.OtherFragmentsPresenter
 import jmapps.arabicinyourhands.ui.activities.AddWordActivity
+import jmapps.arabicinyourhands.ui.activities.AddWordActivity.Companion.KEY_WORD_CATEGORY
 import jmapps.arabicinyourhands.ui.activities.AddWordActivity.Companion.KEY_WORD_CATEGORY_COLOR
 import jmapps.arabicinyourhands.ui.activities.AddWordActivity.Companion.KEY_WORD_CATEGORY_ID
 import jmapps.arabicinyourhands.ui.activities.AddWordActivity.Companion.KEY_WORD_CATEGORY_POSITION
@@ -50,6 +52,8 @@ class DictionaryFragment : Fragment(), ContractInterface.OtherView, SearchView.O
     private var defaultOrderIndex = 0
     private lateinit var deleteAlertDialog: DeleteAlertUtil
 
+    private var currentOrderBy: String? = null
+
     companion object {
         private const val KEY_ORDER_WORD_CATEGORY_INDEX = "key_order_word_category_index"
     }
@@ -79,6 +83,7 @@ class DictionaryFragment : Fragment(), ContractInterface.OtherView, SearchView.O
     }
 
     override fun initView(orderBy: String) {
+        currentOrderBy = orderBy
         wordCategoriesViewModel.allWordCategories(orderBy).observe(this, {
             it.let {
                 val verticalLayout = LinearLayoutManager(requireContext())
@@ -192,6 +197,7 @@ class DictionaryFragment : Fragment(), ContractInterface.OtherView, SearchView.O
         toAddWordActivity.putExtra(KEY_WORD_CATEGORY_TITLE, categoryTitle)
         toAddWordActivity.putExtra(KEY_WORD_CATEGORY_COLOR, categoryColor)
         toAddWordActivity.putExtra(KEY_WORD_CATEGORY_PRIORITY, categoryPriority)
+        toAddWordActivity.putExtra(KEY_WORD_CATEGORY, currentOrderBy)
         startActivity(toAddWordActivity)
     }
 }

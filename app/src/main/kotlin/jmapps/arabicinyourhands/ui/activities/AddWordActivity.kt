@@ -53,6 +53,7 @@ class AddWordActivity : AppCompatActivity(), DeleteAlertUtil.OnClickDelete, View
     private var wordCategoryPriority: Long? = null
     private var defaultOrderIndex: Int? = null
     private var wordGridCount: Int? = null
+    private var currentOrderBy: String? = null
 
     private lateinit var searchView: SearchView
     private lateinit var wordItemsAdapter: WordItemsAdapter
@@ -65,6 +66,7 @@ class AddWordActivity : AppCompatActivity(), DeleteAlertUtil.OnClickDelete, View
         const val KEY_WORD_CATEGORY_TITLE = "key_word_category_title"
         const val KEY_WORD_CATEGORY_COLOR = "key_word_category_color"
         const val KEY_WORD_CATEGORY_PRIORITY = "key_word_category_priority"
+        const val KEY_WORD_CATEGORY = "key_word_category"
         private const val KEY_ORDER_WORD_INDEX = "key_order_word_index"
     }
 
@@ -81,6 +83,7 @@ class AddWordActivity : AppCompatActivity(), DeleteAlertUtil.OnClickDelete, View
         wordCategoryTitle = intent.getStringExtra(KEY_WORD_CATEGORY_TITLE)
         wordCategoryColor = intent.getStringExtra(KEY_WORD_CATEGORY_COLOR)
         wordCategoryPriority = intent.getLongExtra(KEY_WORD_CATEGORY_PRIORITY, 0)
+        currentOrderBy = intent.getStringExtra(KEY_WORD_CATEGORY)
 
         supportActionBar?.let {
             it.setDisplayHomeAsUpEnabled(true)
@@ -93,8 +96,6 @@ class AddWordActivity : AppCompatActivity(), DeleteAlertUtil.OnClickDelete, View
             .registerOnSharedPreferenceChangeListener(this)
         defaultOrderIndex = sharedLocalPreferences.getIntValue(KEY_ORDER_WORD_INDEX, 0)
         wordGridCount = sharedLocalPreferences.getIntValue(ARG_WORD_GRID_COUNT, 2)
-
-        Toast.makeText(this, "$defaultOrderIndex", Toast.LENGTH_SHORT).show()
 
         otherActivityPresenter = OtherActivityPresenter(this)
         otherActivityPresenter.initView(wordCategoryId!!, defaultOrderIndex!!)
@@ -187,7 +188,7 @@ class AddWordActivity : AppCompatActivity(), DeleteAlertUtil.OnClickDelete, View
     }
 
     override fun itemClickRenameItem(wordItemId: Long, word: String, wordTranscription: String, wordTranslate: String) {
-        val renameWordItem = RenameWordItemBottomSheet.toInstance(wordItemId, word, wordTranscription, wordTranslate, wordCategoryId!!, wordCategoryPosition!!, defaultOrderIndex!!)
+        val renameWordItem = RenameWordItemBottomSheet.toInstance(wordItemId, word, wordTranscription, wordTranslate, wordCategoryId!!, wordCategoryPosition!!, currentOrderBy!!)
         renameWordItem.show(supportFragmentManager, ARG_RENAME_WORD_ITEM_BS)
     }
 
