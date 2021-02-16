@@ -10,8 +10,8 @@ android {
         applicationId "jmapps.arabicinyourhands"
         minSdkVersion 21
         targetSdkVersion 30
-        versionCode 8
-        versionName "2.0.0 - mini global"
+        versionCode 9
+        versionName "2.1.0 - dictionary"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -35,7 +35,7 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'androidx.appcompat:appcompat:1.2.0'
-    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'com.google.android.material:material:1.3.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     implementation 'androidx.preference:preference-ktx:1.1.1'
     implementation 'com.readystatesoftware.sqliteasset:sqliteassethelper:2.0.1'
